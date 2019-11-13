@@ -112,6 +112,12 @@ span.marker {
 .link-cmn {
   text-decoration: none;
 }
+/* is */
+.is-pc { display: none; }
+@media screen and (min-width: 769px) {
+  .is-pc { display: unset;}
+  .is-sp { display: none;}
+}
 /* 汎用的スタイル */
 .s-fsize14 { font-size: 14px;}
 .s-fsize18 { font-size: 18px;}
@@ -138,13 +144,13 @@ span.marker {
 .box-logo p {
   font-size: 10px;
   line-height: 16px;
+  letter-spacing: 0;
 }
 .box-logo img {
   width: 90px;
 }
 .link-nav {
   width: 78px;
-  display: inline-block;
   padding-top: 10px;
 }
 .link-nav p {
@@ -160,14 +166,29 @@ span.marker {
 @media screen and ( min-width: 769px) {
   .nav {
     height: 76px;
+    padding: 16px 8px;
   }  
   .box-logo {
+    width: calc(100% - 264px);
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-start;
+    padding: 0;
   }
   .box-logo img {
-    width: 120px;
+    width: 126px;
+  }
+  .box-logo p {
+    font-size: 12px;
+    align-self: flex-end;
+    margin: 0 0 5px 5px;
+  }
+  .link-nav.is-pc {
+    width: 264px;
+    height: 42px;
+    border-radius: 21px;
+    letter-spacing: 0;
+    padding-top: 15px;
   }
 }
 /* header---------------------------------------------- */
