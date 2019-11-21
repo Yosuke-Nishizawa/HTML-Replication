@@ -4,7 +4,6 @@ html {
   -webkit-text-size-adjust: 100%;
   font-family: "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
   color: #333;
-  letter-spacing: 1.5px;
   text-align: center;
   font-weight: 600;
 }
@@ -12,34 +11,25 @@ ul {
   list-style: none;
 }
 /* share buttons */
-ul.share {
+.area-share {
   display: flex;
   justify-content: center;
   color: #ffffff;
   font-size: 11px;
   font-weight: 600;
 }
-ul.share li {
+/* シェアボタン */
+.btn-share {
   padding: 4px 7px;
   margin-left: 5px;
   border-radius: 3px;
   cursor: pointer;
 }
-ul.share li i {
-  margin-right: 5px;
-}
-ul.share .twitter {
-  background-color: #1b95e0;
-}
-ul.share .twitter:hover {
-  background-color: #0C7ABF;
-}
-ul.share [class^="fb"] {
-  background-color: #4267b2;
-}
-ul.share [class^="fb"]:hover {
-  background-color: #365899;
-}
+.icon-share { margin-right: 5px; }
+.btn-twitter { background-color: #1b95e0; }
+.btn-twitter:hover { background-color: #0C7ABF; }
+.btn-fb-iine { background-color: #1877f2; }
+.btn-fb-share { background-color: #1877f2; }
 .braces {
   font-size: 18px;
   line-height: 40px;
@@ -124,6 +114,8 @@ span.marker {
 .s-fwhite { color: #ffffff;}
 .s-lheight40 { line-height: 40px;}
 .s-align-left { text-align: left;}
+/* letter-spacing */
+.s-ls1 { letter-spacing: 1px;}
 /* nav */
 .nav {
   width: 100%;
@@ -196,7 +188,7 @@ span.marker {
   margin-top: 60px;
 }
 /* header top */
-.header .top {
+.sec-header-top {
   background: url(../img/mainsp.jpg) center center / cover no-repeat;
   padding: 20px 0 36px 0;
 }
@@ -213,58 +205,80 @@ span.marker {
   font-size: 15px;
   line-height: 17px;
 }
-/* header news */
-.header .news {
-  background-color: #EBB94d;
-  height: 490px;
-  text-align: center;
+@media screen and (min-width: 769px) {
+  .header {
+    margin-top: 76px;
+  }
+  .sec-header-top { 
+    background: url(../img/main.jpg) center center / cover no-repeat;
+    padding: 110px 0;
+  }
+  .txt-header-top-01 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .txt-header-top-01 + .txt-header-top-01 { margin-top: 10px;}
+  .txt-header-top-02 {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
-.header .news h2,
-.header .news p {
+/* header news */
+.sec-news {
+  padding: 15px 20px 25px;
+  background-color: #EBB94d;
   color: #ffffff;
 }
-.header .news .heading {
-  padding-top: 18px;
+.ttl-news {
   font-size: 15px;
   line-height: 24px;
   letter-spacing: 2px;
 }
-.header .news .asterisk {
-  margin-top: 10px;
+.txt-news-asterisk {
+  margin: 13px auto 0;
+  padding: 0 5px;
+  display: inline-block;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
   line-height: 22px;
   color: #c7254e;
   background-color: #f9f2f4;
-  display: inline-block;
   border-radius: 4px;
 }
-.header .news a {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 100px; 
-  background-color: #da6b64;
+.btn-news {
+  display: block;
+  margin: 30px 0 0;
+  padding: 15px 0; 
   border-radius: 45px;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #ffffff;
-  text-decoration: none;
 }
-.header .news a:hover{
+.btn-news:hover{
   background-color: #d84940;
 }
-.header .news .recruitment {
-  margin-top: 30px;
+.txt-news-cmn {
+  margin-top: 25px;
   font-size: 15px;
   line-height: 24px;
 }
-.header .news .share {
+.area-share-news {
   margin-top: 30px;
 }
-@media screen and (min-width: 769px) {
-  .header {
-    margin-top: 76px;
+@media screen and (min-width:769px) {
+  .sec-news {
+    padding: 30px 80px 40px;
+  }
+  .btn-news {
+    margin: 12px 0 0;
+    padding: 25px 0;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 1px;
+  }
+  .txt-news-cmn {
+    font-size: 18px;
+    line-height: 29px;
   }
 }
 /* page4 */
