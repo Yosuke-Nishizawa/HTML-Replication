@@ -30,7 +30,7 @@ ul {
 .btn-twitter:hover { background-color: #0C7ABF; }
 .btn-fb-iine { background-color: #1877f2; }
 .btn-fb-share { background-color: #1877f2; }
-.braces {
+/* .braces {
   font-size: 18px;
   line-height: 40px;
   text-align: center;
@@ -57,7 +57,7 @@ ul {
   height: 25px;
   border-bottom: #ebb94d solid 4px;
   border-right: #ebb94d solid 4px;
-}
+} */
 .area-braces {
   position: relative;
 }
@@ -343,7 +343,12 @@ span.marker {
   transform: translate(-50%, 50%);
 }
 .contents-page5 {
-  padding: 35px 10px 70px;
+  padding: 35px 20px 70px;
+}
+.ttl-page5-2 {
+  padding: 35px 0 30px;
+  font-size: 18px;
+  line-height: 40px;
 }
 .txt-page5 {
   margin-top: 10px;
@@ -351,7 +356,7 @@ span.marker {
   line-height: 24px;
 }
 .area-page5 {
-  margin: 30px 10px 0;
+  margin: 30px 0 0;
   padding: 10px 10px 25px;
 }
 .ttl-page5-3 {
@@ -386,6 +391,18 @@ span.marker {
     height: 80px;
     line-height: 80px;
     font-size: 14px;
+  }
+  .ttl-page5-2 {
+    font-size: 24px;
+  }
+  .area-page5 {
+    padding: 30px 0 50px;
+  }
+  .ttl-page5-3 {
+    font-size: 16px;
+  }
+  .img-page5-item {
+    height: 70px;
   }
 }
 /* page6 */
