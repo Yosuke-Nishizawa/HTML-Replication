@@ -367,14 +367,13 @@ span.marker {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
 }
 .list-page5-item {
-  width: 120px;
+  width: 110px;
   margin-top: 16px;
 }
-.img-page5-item {
-  height: 32px;
-}
+[class^="img-page5-item-"] { height: 30px;}
 .txt-page5-item {
   font-weight: 300;
   font-size: 10px;
@@ -401,8 +400,17 @@ span.marker {
   .ttl-page5-3 {
     font-size: 16px;
   }
-  .img-page5-item {
-    height: 70px;
+  .list-page5-item {
+    width: 135px;
+  }
+  .img-page5-item-1 { height: 57px; }
+  .img-page5-item-2 { height: 70px; }
+  .img-page5-item-3 { height: 59px; }
+  .img-page5-item-4 { height: 53px; }
+  .img-page5-item-5 { height: 50px; }
+  .txt-page5-item {
+    font-size: 12px;
+    line-height: 19px;
   }
 }
 /* page6 */
