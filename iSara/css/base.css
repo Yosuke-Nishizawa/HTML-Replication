@@ -124,6 +124,9 @@ span.marker {
 /* letter-spacing */
 .s-ls1 { letter-spacing: 1px;}
 .s-ls2 { letter-spacing: 2px;}
+/* color */
+.s-orange { color: #ebb94d; }
+.s-white { color: #ffffff;}
 /* nav */
 .nav {
   width: 100%;
@@ -414,55 +417,46 @@ span.marker {
   }
 }
 /* page6 */
-#page6 .container {
-  height: 626px;
+.contents-page6 {
+  padding: 50px 30px 45px;
   background: url(../img/aboutsecondbgsp.jpg) center center/cover no-repeat;
-  text-align: center;
 }
-#page6 .container h2 {
-  padding: 50px 40px 10px;
+.ttl-page6-2 {
   font-size: 18px;
   line-height: 20px;
-  color: #ffffff;
 }
-#page6 .container p {
+.txt-page6 {
   margin-top: 10px;
   font-size: 13px;
   line-height: 21px;
-  color: #ffffff;
 }
-#page6 .emphasis {
-  color: #ebb94d;
-}
-#page6 .container ul {
-  margin: 30px;
-}
-#page6 .container li {
+.txt-page6:first-of-type { margin-top: 20px;}
+.area-page6-step {
   background-color: #ffffff;
   border-radius: 5px;
-  padding: 14px;
-  margin-top: 16px;
+  padding: 14px 45px;
+  margin-top: 15px;
 }
-#page6 .container li p {
+.area-page6-step:first-of-type { margin-top: 30px;}
+.ttl-page6-step {
+  background-color: #ebb94d;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 19px;
+}
+[class^="txt-page6-step-"] {
   margin-top: 5px;
   font-size: 12px;
   line-height: 19px;
-  color: #000000;
 }
-#page6 .container li p.step {
-  background-color: #ebb94d;
-  margin: 0 38px;
-  border-radius: 5px;
-  color: #ffffff;
-}
-#page6 .container li p.timing {
+/* #page6 .container li p.timing {
   margin-top: 16px;
   letter-spacing: 0;
 }
 #page6 .container li p.details {
   margin-top: 6px;
   letter-spacing: 1.6px;
-}
+} */
 #page6 .footer {
   height: 98px;
   background-color: #016ea9;
