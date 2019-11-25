@@ -444,29 +444,23 @@ span.marker {
   font-size: 12px;
   line-height: 19px;
 }
-[class^="txt-page6-step-"] {
+.txt-page6-step {
+  font-size: 12px;
+  line-height: 19px;
+}
+.txt-page6-step:nth-of-type(2) {
+  margin-top: 15px;
+}
+.txt-page6-step:nth-of-type(3) {
   margin-top: 5px;
-  font-size: 12px;
-  line-height: 19px;
 }
-/* #page6 .container li p.timing {
-  margin-top: 16px;
-  letter-spacing: 0;
-}
-#page6 .container li p.details {
-  margin-top: 6px;
-  letter-spacing: 1.6px;
-} */
-#page6 .footer {
-  height: 98px;
+.footer-page6 {
   background-color: #016ea9;
-  color: #ffffff;
-  text-align: center;
+}
+.txt-page6-footer {
+  padding-top: 20px;
   font-size: 12px;
   line-height: 19px;
-}
-#page6 .footer p {
-  padding-top: 20px;
 }
 /* page7 */
 #page7 {
