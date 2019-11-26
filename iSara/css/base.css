@@ -371,6 +371,10 @@ span.marker {
   .sec-page4 {
     padding: 40px 20px 20px;
   }
+  .area-page4-title {
+    margin: 0 auto;
+    max-width: 860px; 
+  }
   .ttl-page4 {
     font-size: 24px;
     line-height: 40px;
@@ -378,6 +382,16 @@ span.marker {
   .txt-page4 {
     font-size: 16px;
     line-height: 26px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page4 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page4 {
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 /* page5 */
