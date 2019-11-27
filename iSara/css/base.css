@@ -354,7 +354,8 @@ span.marker {
 }
 /* page4 */
 .sec-page4 {
-  padding: 30px 20px 0;
+  padding: 30px 20px 85px;
+  background: url(../img/introbottom.jpg) center bottom/contain no-repeat;
 }
 .ttl-page4 {
   padding: 30px 0 20px;
@@ -369,7 +370,8 @@ span.marker {
 }
 @media screen and (min-width:769px) {
   .sec-page4 {
-    padding: 40px 20px 20px;
+    padding: 40px 20px 185px;
+    background-size: auto;
   }
   .area-page4-title {
     margin: 0 auto;
@@ -385,6 +387,10 @@ span.marker {
   }
 }
 @media screen and (min-width:1191px) {
+  .sec-page4 {
+    background-size: cover;
+    padding-bottom: 150px;
+  }
   .ttl-page4 {
     font-size: 28px;
     line-height: 40px;
@@ -397,10 +403,6 @@ span.marker {
 /* page5 */
 .sec-page5 {
   background-color: #fef5e0;
-}
-.img-page5 {
-  height: 85px;
-  background: url(../img/introbottom.jpg) no-repeat bottom center / cover;
   position: relative;
 }
 .circle-page5 {
@@ -408,7 +410,7 @@ span.marker {
   width: 60px;
   border-radius: 50%;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   background-color: #ebb94d;
   font-weight: 400;
@@ -417,12 +419,14 @@ span.marker {
   text-align: center;
   line-height: 60px;
   letter-spacing: 1.5px;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
 }
 .contents-page5 {
-  padding: 35px 20px 70px;
+  padding: 60px 18px 70px;
 }
 .ttl-page5-2 {
+  margin: 0 auto;
+  max-width: 860px;
   padding: 35px 0 30px;
   font-size: 18px;
   line-height: 40px;
@@ -458,9 +462,8 @@ span.marker {
   margin-top: 8px;
 }
 @media screen and (min-width:769px) {
-  .img-page5 {
-    height: 170px;
-    background-size: auto;
+  .contents-page5 {
+    padding-top: 80px;
   }
   .circle-page5 {
     width: 80px;
@@ -470,6 +473,11 @@ span.marker {
   }
   .ttl-page5-2 {
     font-size: 24px;
+  }
+  .txt-page5 {
+    margin-top: 40px;
+    font-size: 16px;
+    line-height: 26px;
   }
   .area-page5 {
     padding: 30px 0 50px;
@@ -488,6 +496,16 @@ span.marker {
   .txt-page5-item {
     font-size: 12px;
     line-height: 19px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page5-2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page5 {
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 /* page6 */
@@ -574,6 +592,16 @@ span.marker {
   .txt-page6-footer {
     font-size: 16px;
     line-height: 26px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page6-2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page6 {
+    font-size: 20px;
+    line-height: 32px;
   }
 }
 /* page7 */
