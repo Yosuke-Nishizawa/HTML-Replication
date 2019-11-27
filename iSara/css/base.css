@@ -523,13 +523,15 @@ span.marker {
   line-height: 21px;
 }
 .txt-page6:first-of-type { margin-top: 20px;}
+.list-page6-step {
+  margin-top: 30px;
+}
 .area-page6-step {
   background-color: #ffffff;
   border-radius: 5px;
   padding: 14px 45px;
-  margin-top: 15px;
 }
-.area-page6-step:first-of-type { margin-top: 30px;}
+.area-page6-step+.area-page6-step { margin-top: 15px;}
 .ttl-page6-step {
   background-color: #ebb94d;
   border-radius: 5px;
@@ -567,10 +569,13 @@ span.marker {
     font-size: 16px;
     line-height: 26px;
   }
+  .list-page6-step {
+    margin: 30px 30% 0;
+  }
   .area-page6-step {
-    margin: 20px 30% 0;
     padding: 32px;
   }
+  .area-page6-step+.area-page6-step { margin-top: 20px;}
   .ttl-page6-step {
     font-size: 14px;
     line-height: 22px;
@@ -602,6 +607,15 @@ span.marker {
   .txt-page6 {
     font-size: 20px;
     line-height: 32px;
+    letter-spacing: 1px;
+  }
+  .list-page6-step {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .area-page6-step {
+    width: 375px;
   }
 }
 /* page7 */
