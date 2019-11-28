@@ -600,6 +600,9 @@ span.marker {
   }
 }
 @media screen and (min-width:1191px) {
+  .contents-page6 {
+    padding-bottom: 40px;
+  }
   .ttl-page6-2 {
     font-size: 28px;
     line-height: 40px;
@@ -611,44 +614,123 @@ span.marker {
   }
   .list-page6-step {
     display: flex;
+    justify-content: center;
     margin-left: 0;
     margin-right: 0;
   }
   .area-page6-step {
     width: 375px;
   }
+  .area-page6-step+.area-page6-step {
+    margin: 0 0 0 20px;
+  }
+  .ttl-page6-step {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page6-step:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+  .txt-page6-step:nth-of-type(3) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page6-footer {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 /* page7 */
-#page7 {
-  text-align: center;
-  padding: 50px 0 34px;
+.sec-page7 {
+  padding: 50px 60px 34px;
 }
-#page7 h2 {
-  font-weight: 600;
+.ttl-page7-02 {
   font-size: 18px; 
 }
-#page7 h2 small {
+.txt-page7-small {
   font-size: 12px;
 }
-#page7 p.htext {
+.txt-page7-01 {
   font-weight: 300;
   font-size: 15px;
   line-height: 24px;
-  margin-top: 50px;
+  margin-top: 45px;
 }
-#page7 ul {
+.grid-page7-skills {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
-#page7 ul img {
-  width: 80px;
-  margin-right: 10px;
+.grid-page7-skills .col {
+  width: calc((100% - 30px)* 0.25);
+  max-width: 120px;
+  height: calc((100% - 30px)* 0.25);
+  max-height: 120px;
 }
-#page7 p.bottom-text{
+.img-page7-skill {
+  width: 100%;
+}
+.txt-page7-02 {
   font-size: 12px;
   line-height: 19px;
   margin-top: 24px;
+}
+@media screen and (min-width:769px) {
+  .sec-page7 {
+    padding: 65px 25px 50px;
+  }
+  .ttl-page7-02 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .txt-page7-small {
+    font-size: 14px;
+    line-height: 40px;
+  }
+  .txt-page7-01 {
+    margin-top: 35px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .grid-page7-skills {
+    margin: 65px auto 0;
+    max-width: 850px;
+  }
+  .grid-page7-skills .col {
+    width: calc((100% - 120px)* 0.25);
+    max-width: 180px;
+    height: calc((100% - 120px)* 0.25);
+    max-height: 180px;
+  }
+  .txt-page7-02 {
+    margin-top: 60px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page7-02 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page7-small {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .txt-page7-01 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .grid-page7-skills {
+    margin-top: 45px;
+  }
+  .txt-page7-02 {
+    margin-top: 45px;
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 /* page8 */
 #page8 {
