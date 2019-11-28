@@ -749,38 +749,26 @@ span.marker {
   font-size: 18px;
   line-height: 40px;
 }
-#page8 ul {
-  padding: 0 10px;
-}
-#page8 li {
+.grid-page8-merit {
   margin-top: 20px;
-  text-align: center;
 }
-#page8 li [class^="img"] {
+[class^="img-page8-merit-"] {
   height: 120px;
 }
-#page8 li .img-1 {
-  background: url(../img/learnfromfreelancer.jpg) center center/cover no-repeat;
-}
-#page8 li .img-2 {
-  background: url(../img/learnfromprojects.jpg) center center/cover no-repeat;
-}
-#page8 li .img-3 {
-  background: url(../img/actuallyfree.jpg) center center/cover no-repeat;
-}
-#page8 li h3 {
+.img-page8-merit-01 { background: url(../img/learnfromfreelancer.jpg) center center/cover no-repeat;}
+.img-page8-merit-02 { background: url(../img/learnfromprojects.jpg) center center/cover no-repeat;}
+.img-page8-merit-03 { background: url(../img/actuallyfree.jpg) center center/cover no-repeat;}
+.ttl-page8-03 {
+  margin-top: 10px;
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
-  color: #ebb94d;
-  margin-top: 10px;
 }
-#page8 li p {
-  margin: 10px 28px 0 24px;
+.txt-page8-merit {
+  margin: 10px 24px 0;
   font-weight: 300;
   font-size: 12px;
   line-height: 19px;
-  text-align: left;
   letter-spacing: 1.5px;
 }
 #page8 .area-orange {
