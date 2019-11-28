@@ -733,15 +733,19 @@ span.marker {
   }
 }
 /* page8 */
-#page8 {
+.sec-page8 {
+  padding: 30px 15px 45px;
   background-color: #fef5e0;
-  padding-bottom: 40px;
 }
-#page8 .braces p {
+.box-page8-braces {
+  padding: 25px 0 15px;
+}
+.txt-page8-braces {
   font-size: 15px;
   line-height: 21px;
 }
-#page8 .braces h2 {
+.ttl-page8-02 {
+  margin-top: 15px;
   font-size: 18px;
   line-height: 40px;
 }
