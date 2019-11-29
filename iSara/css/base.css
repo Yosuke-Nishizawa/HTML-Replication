@@ -734,7 +734,7 @@ span.marker {
 }
 /* page8 */
 .sec-page8 {
-  padding: 30px 15px 45px;
+  padding: 30px 10px 45px;
   background-color: #fef5e0;
 }
 .box-page8-braces {
@@ -771,33 +771,49 @@ span.marker {
   line-height: 19px;
   letter-spacing: 1.5px;
 }
-#page8 .area-orange {
-  margin-top: 30px;
-  padding-bottom: 20px;
+.grid-page8-merit .col+.col {
+  margin-top: 20px;
 }
-#page8 .area-orange h3 {
+.sec-page8-support {
+  margin: 35px 5px 0;
+  padding: 10px 10px 20px;
+}
+.ttl-page8-03-02 {
   font-size: 18px;
   line-height: 29px;
-  color: #ebb94d;
 }
-#page8 .area-orange p {
+.txt-page8-support {
+  margin-top: 10px;
   font-size: 15px;
   line-height: 24px;
-  margin-top: 10px;
 }
-#page8 .area-orange p.small {
+.txt-page8-support-small {
+  margin-top: 10px;
   font-size: 10px;
   line-height: 16px;
-  letter-spacing: 0;
-  margin-top: 10px;
 }
-#page8 .note {
+.txt-page8-note {
+  margin-top: 16px;
   font-weight: 300;
   font-size: 12px;
   line-height: 19px;
-  text-align: center;
-  letter-spacing: 0;
-  margin: 16px 10px 0;
+}
+@media screen and (min-width:769px) {
+  .sec-page8 {
+    padding: 30px 50px 50px;
+  }
+  .box-page8-braces {
+    margin: 0 20px 0;
+  }
+  .txt-page8-braces {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .ttl-page8-02 {
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
 /* page9 */
 #page9 {
