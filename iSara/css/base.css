@@ -800,10 +800,10 @@ span.marker {
 }
 @media screen and (min-width:769px) {
   .sec-page8 {
-    padding: 30px 50px 50px;
+    padding: 30px 60px 50px;
   }
   .box-page8-braces {
-    margin: 0 20px 0;
+    margin: 0 10px 0;
   }
   .txt-page8-braces {
     font-size: 16px;
@@ -813,6 +813,43 @@ span.marker {
     margin-top: 0;
     font-size: 24px;
     line-height: 40px;
+  }
+  .grid-page8-merit {
+    margin-top: 35px;
+  }
+  [class^="img-page8-merit-"] {
+    margin: 0 auto;
+    width: 300px;
+    height: 180px;
+  }
+  .ttl-page8-03 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page8-merit {
+    margin: 10px 35px 0;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .sec-page8-support {
+    margin: 60px 10px 0;
+    padding: 40px 40px 50px;
+  }
+  .ttl-page8-03-02 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .txt-page8-support {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page8-support-small {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+  .txt-page8-note {
+    margin-top: 40px;
   }
 }
 /* page9 */
