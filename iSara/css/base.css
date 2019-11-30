@@ -819,7 +819,7 @@ span.marker {
   }
   [class^="img-page8-merit-"] {
     margin: 0 auto;
-    width: 300px;
+    background-size: auto;;
     height: 180px;
   }
   .ttl-page8-03 {
@@ -850,6 +850,21 @@ span.marker {
   }
   .txt-page8-note {
     margin-top: 40px;
+  }
+}
+@media screen and (min-width:992px) {
+  .grid-page8-merit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .grid-page8-merit .col {
+    width: calc(100% / 3);
+  }
+  .grid-page8-merit .col+.col {
+    margin-top: 0;
+  }
+  [class^="img-page8-merit-"] {
+    margin: 0;
   }
 }
 /* page9 */
