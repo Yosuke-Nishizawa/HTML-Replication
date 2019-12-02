@@ -926,30 +926,29 @@ span.marker {
   }
 }
 /* page9 */
-#page9 {
+.sec-page9 {
   padding: 70px 10px 20px;
-  text-align: center;
   background: url(../img/teacherbgsp.jpg) center bottom/cover no-repeat;
   color: #ffffff;
 }
-#page9 h2 {
+.ttl-page9-02 {
   font-size: 18px;
 }
-#page9 .h-text {
+.txt-page9-title {
   font-size: 12px;
   line-height: 19px;
-  margin: 50px;
+  margin-top: 40px;
 }
-#page9 ul {
+.grid-page9 {
   margin-top: 50px;
 }
-#page9 li {
+.grid-page9 .col {
   border: #ffffff solid 3px;
   padding: 46px 10px 26px;
   margin-top: 120px;
   position: relative;
 }
-#page9 li img {
+.img-page9-item {
   width: 120px;
   border-radius: 50%;
   position: absolute;
@@ -957,17 +956,13 @@ span.marker {
   left: 50%;
   transform: translate(-50%, -70%);
 }
-#page9 li p {
+.txt-page9-item {
   font-weight: 300;
   font-size: 12px;
   line-height: 19px;
 }
-#page9 li p.person-name {
+.txt-page9-item+.txt-page9-item {
   margin-top: 10px;
-}
-#page9 li p.explanation {
-  margin-top: 10px;
-  text-align: left;
 }
 /* page10 */
 #page10 {
