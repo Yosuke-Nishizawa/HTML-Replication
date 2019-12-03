@@ -139,6 +139,7 @@ span.marker {
 }
 .contents-nav {
   display: flex;
+  height: 100%;
 }
 .box-logo {
   display: flex;
@@ -928,7 +929,7 @@ span.marker {
 /* page9 */
 .sec-page9 {
   padding: 70px 10px 20px;
-  background: url(../img/teacherbgsp.jpg) center bottom/cover no-repeat;
+  background: url(../img/teacherbgsp.jpg) center/cover no-repeat;
   color: #ffffff;
 }
 .ttl-page9-02 {
@@ -940,7 +941,7 @@ span.marker {
   margin-top: 40px;
 }
 .grid-page9 {
-  margin-top: 50px;
+  margin-top: 130px;
 }
 .grid-page9 .col {
   border: #ffffff solid 3px;
@@ -963,6 +964,30 @@ span.marker {
 }
 .txt-page9-item+.txt-page9-item {
   margin-top: 10px;
+}
+@media screen and (min-width:769px) {
+  .sec-page9 {
+    padding: 90px 50px 50px;
+  }
+  .ttl-page9-02 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .txt-page9-title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .grid-page9 {
+    margin-top: 210px;
+  }
+  .img-page9-item {
+    width: 200px;
+    transform: translate(-50%, -83%);
+  }
+  .txt-page9-item {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 /* page10 */
 #page10 {
