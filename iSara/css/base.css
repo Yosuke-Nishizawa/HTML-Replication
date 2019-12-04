@@ -123,6 +123,7 @@ span.marker {
 .s-align-left { text-align: left;}
 /* letter-spacing */
 .s-ls1 { letter-spacing: 1px;}
+.s-ls1_5 { letter-spacing: 1.5px;}
 .s-ls2 { letter-spacing: 2px;}
 /* color */
 .s-orange { color: #ebb94d; }
@@ -946,8 +947,10 @@ span.marker {
 .grid-page9 .col {
   border: #ffffff solid 3px;
   padding: 46px 10px 26px;
-  margin-top: 120px;
   position: relative;
+}
+.grid-page9 .col+.col {
+  margin-top: 120px;
 }
 .img-page9-item {
   width: 120px;
@@ -968,6 +971,7 @@ span.marker {
 @media screen and (min-width:769px) {
   .sec-page9 {
     padding: 90px 50px 50px;
+    background: url(../img/teacherbg.jpg) center/cover no-repeat;
   }
   .ttl-page9-02 {
     font-size: 24px;
@@ -980,6 +984,12 @@ span.marker {
   .grid-page9 {
     margin-top: 210px;
   }
+  .grid-page9 .col {
+    padding: 40px 38px 55px;
+  }
+  .grid-page9 .col+.col {
+    margin-top: 198px;
+  }
   .img-page9-item {
     width: 200px;
     transform: translate(-50%, -83%);
@@ -987,6 +997,47 @@ span.marker {
   .txt-page9-item {
     font-size: 14px;
     line-height: 22px;
+  }
+}
+@media screen and (min-width:992px) {
+  .grid-page9 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .grid-page9 .col {
+    width: 375px;
+  }
+  .grid-page9 .col+.col {
+    margin-top: 0;
+  }
+  .grid-page9 .col:nth-of-type(n+3) {
+    margin-top: 198px;
+  }
+  .grid-page9 .col:nth-of-type(even) {
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .sec-page9 {
+    padding: 80px 0 40px;
+  }
+  .ttl-page9-02 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .grid-page9 {
+    width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .txt-page9-title {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page9-item {
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 /* page10 */
