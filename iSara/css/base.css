@@ -1041,14 +1041,12 @@ span.marker {
   }
 }
 /* page10 */
-#page10 {
-  text-align: center;
-}
-#page10 .area-qa {
+.box-page10-qa {
+  margin-top: 10px;
+  padding: 20px 18px;
   background-color: #ebb94d;
-  padding: 20px 10px 40px;
 }
-#page10 .area-qa p {
+.txt-page10-qa {
   background-color: #ffffff;
   border-radius: 50%;
   color: #ebb94d;
@@ -1058,5 +1056,12 @@ span.marker {
   width: 60px;
   margin: 0 auto;
 }
-.area-qa .braces::before { border-color: #ffffff; }
-.area-qa .braces::after { border-color: #ffffff; }
+.box-page10-braces {
+  padding: 10px 0;
+}
+.ttl-page10-02 {
+  font-size: 14px;
+  line-height: 40px;
+}
+.box-page10-braces::before { border-color: #ffffff; }
+.box-page10-braces::after { border-color: #ffffff; }
