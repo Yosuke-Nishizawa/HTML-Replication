@@ -1042,7 +1042,6 @@ span.marker {
 }
 /* page10 */
 .box-page10-qa {
-  margin-top: 10px;
   padding: 20px 18px;
   background-color: #ebb94d;
   position: relative;
@@ -1100,7 +1099,7 @@ span.marker {
   display: flex;
 }
 .img-page10-item {
-  width: 190px;
+  width: 31.5%;
   border: 3px solid #ebb94d;
 }
 .contents-page10-item {
@@ -1125,4 +1124,41 @@ span.marker {
 }
 .list-page10 .item+.item {
   margin-top: 40px;
+}
+@media screen and (min-width:769px) {
+  .box-page10-qa {
+    padding: 40px 20px;
+  }
+  .txt-page10-qa {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+    line-height: 80px;
+  }
+  .box-page10-braces {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .triangle-page10 {
+    border-width: 18px;
+  }
+  .contents-page10 {
+    padding: 40px 20px 60px;
+  }
+  .txt-page10-contents:nth-of-type(1) {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .txt-page10-contents:nth-of-type(2) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .txt-page10-contents:nth-of-type(3) {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .contents-page10-item {
+    margin-top: 18px;
+    margin-left: 30px;
+  }
 }
