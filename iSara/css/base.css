@@ -1162,3 +1162,53 @@ span.marker {
     margin-left: 30px;
   }
 }
+@media screen and (min-width:992px) {
+  .box-page10-braces {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 860px;
+  }
+  .contents-page10 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .img-page10-item {
+    width: 22%;
+  }
+  .contents-page10-item {
+    width: 43%;
+  }
+}
+@media screen and (min-width:1191px) {
+  .txt-page10-qa {
+    font-size: 14px;
+    line-height: 80px;
+  }
+  .ttl-page10-02 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page10-contents:nth-of-type(1) {
+    font-size: 28px;
+    line-height: 45px;
+  }
+  .txt-page10-contents:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page10-contents:nth-of-type(3) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .list-page10 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 760px;
+  }
+  .img-page10-item {
+    width: 32%;
+  }
+  .contents-page10-item {
+    width: auto;
+  }
+}
