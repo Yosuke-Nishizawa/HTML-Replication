@@ -1203,12 +1203,25 @@ span.marker {
   .list-page10 {
     margin-left: auto;
     margin-right: auto;
-    width: 760px;
+    width: 765px;
   }
   .img-page10-item {
-    width: 32%;
+    width: 245px;
   }
   .contents-page10-item {
     width: auto;
   }
+}
+/* page11 */
+.contents-page11-main {
+  padding: 40px 10px;
+  background: url(../img/classbgsp.jpg) center/cover no-repeat;
+}
+.ttl-page11-02 {
+  font-size: 18px;
+  line-height: 40px;
+}
+.txt-page11-02 {
+  font-size: 12px;
+  line-height: 19px;
 }
