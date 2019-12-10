@@ -1266,8 +1266,40 @@ span.marker {
   line-height: 24px;
 }
 @media screen and (min-width:769px) {
+  .contents-page11-main {
+    padding: 60px 0 70px;
+    background: url(../img/classbg.jpg) center/cover no-repeat;
+  }
+  .ttl-page11-02 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .txt-page11-02 {
+    font-size: 14px;
+    line-height: 22px;
+  }
   .grid-page11 {
-    margin: 50px auto;
+    margin: 50px auto 0;
     width: calc(720px - 13.5%);
+  }
+  .ttl-page11-03 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .list-page11 .item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .contents-page11-footer {
+    padding: 40px 0;
+  }
+  .txt-page11-footer {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width:992px) {
+  .grid-page11 {
+    display: flex;
   }
 }
