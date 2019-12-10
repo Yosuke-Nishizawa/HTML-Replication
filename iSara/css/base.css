@@ -1222,6 +1222,52 @@ span.marker {
   line-height: 40px;
 }
 .txt-page11-02 {
+  margin-top: 10px;
   font-size: 12px;
   line-height: 19px;
+}
+.grid-page11 {
+  margin-top: 30px;
+}
+.grid-page11 .col {
+  padding-top: 15px;
+  border: solid 2px #016ea9;
+  background-color: #016ea9;
+  border-radius: 5px;
+}
+.grid-page11 .col+.col {
+  margin-top: 15px;
+}
+.ttl-page11-03 {
+  font-size: 15px;
+  line-height: 24px;
+}
+.list-page11 {
+  margin-top: 15px;
+}
+.list-page11 .item {
+  padding: 11px;
+  border-bottom: 1px dotted #e5e5e5;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 1px;
+}
+.list-page11 .item:first-of-type {
+  padding-top: 20px;
+}
+.contents-page11-footer {
+  padding: 20px 0;
+  background-color: #016ea9;
+}
+.txt-page11-footer {
+  font-size: 15px;
+  line-height: 24px;
+}
+@media screen and (min-width:769px) {
+  .grid-page11 {
+    margin: 50px auto;
+    width: calc(720px - 13.5%);
+  }
 }
