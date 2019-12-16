@@ -29,10 +29,10 @@
           </h2>
           <div class="arrow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"></div>
         </div>
-        <div id="collapseOne" class="collapse">
-          <div class="card-body">
+        <div id="collapseOne" class="collapse card-body">
             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
+          <!-- <div class="card-body">
+          </div> -->
         </div>
       </div>
       <div class="card">
@@ -42,6 +42,7 @@
               Collapsible Group Item #1
             </button>
           </h2>
+          <div class="arrow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"></div>
         </div>
         <div id="collapseTwo" class="collapse">
           <div class="card-body">
@@ -56,6 +57,7 @@
               Collapsible Group Item #1
             </button>
           </h2>
+          <div class="arrow" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"></div>
         </div>
         <div id="collapseThree" class="collapse">
           <div class="card-body">
@@ -68,9 +70,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
-      $("#collapseOne").on("shown.bs.collapse", function(){
-        $("[data-target='#collapseOne'].arrow").css("transform","translate(0, -80%) rotate(225deg)")
-      })
+      const setRotateDeg = function(event, deg) {
+        const id = event.currentTarget.id;
+        $(`[data-target='#${id}'].arrow`).css("transform",`translate(0, -80%) rotate(${deg}deg)`);
+      }
+      $(".collapse")
+        .on("show.bs.collapse", event => setRotateDeg(event, 225))
+        .on("hide.bs.collapse", event => setRotateDeg(event, 45));
     </script>
   </body>
 </html>
