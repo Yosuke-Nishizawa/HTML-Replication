@@ -1,10 +1,13 @@
 @charset "utf-8";
 /* common--------------------------------- */
-html {
+body {
   -webkit-text-size-adjust: 100%;
   font-family: "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "MS PGothic", sans-serif;
   color: #333;
   text-align: center;
+  font-weight: 600;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 ul {
@@ -105,6 +108,9 @@ span.marker {
   background-color: #da6b64;
   color: #ffffff;
 }
+.box-pink:hover {
+  color: #ffffff;
+}
 /* link */
 .link-cmn {
   text-decoration: none;
@@ -140,6 +146,7 @@ span.marker {
 }
 .contents-nav {
   display: flex;
+  width: 100%;
   height: 100%;
 }
 .box-logo {
@@ -304,6 +311,7 @@ span.marker {
 }
 .btn-news:hover{
   background-color: #d84940;
+  text-decoration: none;
 }
 .txt-news-cmn {
   margin-top: 25px;
