@@ -1328,9 +1328,18 @@ span.marker {
   }
 }
 /* page12 */
+.sec-page12 {
+  padding: 50px 15px 60px;
+}
+.sec-page12-list {
+  background-color: #fef5e0;
+  border: 0;
+}
 .box-page12-list-header {
   padding: 10px 15px;
   position: relative;
+  background-color: transparent;
+  border: 0;
 }
 .img-page12-list {
   width: 35px;
@@ -1346,10 +1355,17 @@ span.marker {
 }
 .arrow-page12 {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   top: 50%;
   right: 20px;
   border-bottom: 4px solid #000000;
   border-right: 4px solid #000000;
+}
+.txt-page12-list-body {
+  font-size: 12px;
+  line-height: 19px;
+}
+.txt-page12-list-body:last-of-type {
+  font-weight: 300;
 }

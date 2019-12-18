@@ -1,7 +1,7 @@
 (function(){
   const setRotateDeg = function(event, deg) {
     const id = event.currentTarget.id;
-    $(`[data-target='#${id}'].arrow-page12`).css("transform",`translate(0, 0) rotate(${deg}deg)`);
+    $(`[data-target='#${id}'].arrow-page12`).css("transform",`translate(0, -50%) rotate(${deg}deg)`);
   }
   $(".collapse")
     .on("show.bs.collapse", event => setRotateDeg(event, 225))
