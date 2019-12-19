@@ -1331,6 +1331,9 @@ span.marker {
 .sec-page12 {
   padding: 50px 15px 60px;
 }
+.list-page12 .item+.item {
+  margin-top: 5px;
+}
 .sec-page12-list {
   background-color: #fef5e0;
   border: 0;
@@ -1355,6 +1358,9 @@ span.marker {
   font-weight: 600;
   letter-spacing: 1px;
 }
+.ttl-page12-03:hover {
+  text-decoration: underline;
+}
 .arrow-page12 {
   position: absolute;
   width: 10px;
@@ -1375,6 +1381,6 @@ span.marker {
 .txt-page12-list-body+.txt-page12-list-body {
   margin-top: 10px;
 }
-.txt-page12-list-body:last-of-type {
+.txt-page12-list-body.s-thin {
   font-weight: 300;
 }
