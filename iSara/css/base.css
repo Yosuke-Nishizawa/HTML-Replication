@@ -1395,3 +1395,16 @@ span.marker {
 .txt-page12-list-body.s-thin {
   font-weight: 300;
 }
+@media screen and (min-width:769px) {
+  .sec-page12-03 {
+    padding: 30px 35px 35px 75px;
+    background-color: #fef5e0;
+    border-radius: 20px;
+    display: flex;
+  }
+  .ttl-page12-03 {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
