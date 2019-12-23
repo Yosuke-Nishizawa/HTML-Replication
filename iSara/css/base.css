@@ -1433,4 +1433,8 @@ span.marker {
     line-height: 19px;
     font-weight: 300;
   }
+  .img-page12-flow {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
