@@ -1458,3 +1458,25 @@ span.marker {
     margin: 0 130px;
   }
 }
+@media screen and (min-width:1191px) {
+  .sec-page12 {
+    padding: 60px 0 40px;
+  }
+  .ttl-page12-02 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .ttl-page12-02 .fas {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .txt-page12-list-body {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page12-list-body.s-thin {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+}
