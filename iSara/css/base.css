@@ -1399,7 +1399,23 @@ span.marker {
 }
 @media screen and (min-width:769px) {
   .sec-page12 {
-    padding:45px 60px 20px;
+    padding:45px 40px 20px;
+  }
+  .ttl-page12-02 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .ttl-page12-02 .fas {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .hero-page12 {
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .contents-page12 {
+    margin: 40px 20px 0;
   }
   .sec-page12-03 {
     padding: 30px 35px 35px 55px;
@@ -1412,13 +1428,17 @@ span.marker {
   }
   .ttl-page12-03 {
     margin-top: 10px;
+    margin-left: 0;
     font-size: 18px;
     line-height: 29px;
     color: #333333;
   }
+  .ttl-page12-03:hover {
+    text-decoration: none;
+  }
   .box-page12-card {
     margin-left: 20px;
-    width: 70%;
+    width: calc(100% - 180px);/* box-page12-title(160px) + margin-left(20px)*/
   }
   .txt-page12-list-body {
     margin-top: 10px;
@@ -1434,7 +1454,7 @@ span.marker {
     font-weight: 300;
   }
   .img-page12-flow {
-    width: 60%;
-    margin: 0 auto;
+    width: calc(100% - 260px);
+    margin: 0 130px;
   }
 }
