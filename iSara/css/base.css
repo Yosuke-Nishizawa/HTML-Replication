@@ -1480,3 +1480,41 @@ span.marker {
     letter-spacing: 1px;
   }
 }
+/* page13 */
+.sec-page13 {
+  padding: 40px 30px 30px;
+  color: #ffffff;
+  background: url(../img/bangkokbgsp.jpg) center/cover no-repeat;
+}
+.ttl-page13-02 {
+  font-size: 24px;
+  line-height: 40px;
+}
+.txt-page13-header {
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 19px;
+}
+.box-page13-list {
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 19px;
+}
+.box-page13-list>.item+.item {
+  margin-top: 10px;
+}
+.txt-page13-footer {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 24px;
+}
+@media screen and (min-width:769px) {
+  .sec-page13 {
+    padding: 60px 60px 50px;
+    background: url(../img/bangkokbg.jpg) center/cover no-repeat;
+  }
+  .ttl-page13-02 {
+    text-align: left;
+  }
+}
