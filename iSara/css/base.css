@@ -1517,4 +1517,33 @@ span.marker {
   .ttl-page13-02 {
     text-align: left;
   }
+  .box-page13-list {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .txt-page13-footer {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .sec-page13 {
+    padding: 100px;
+  }
+  .ttl-page13-02 {
+    letter-spacing: 2px;
+  }
+  .txt-page13-header {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+  .box-page13-list {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .txt-page13-footer {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
