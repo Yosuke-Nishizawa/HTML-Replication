@@ -1547,3 +1547,49 @@ span.marker {
     line-height: 32px;
   }
 }
+/* page14 */
+.sec-page14 {
+  padding: 25px 15px 20px;
+  background-color: #f7c23c;
+}
+.ttl-page14-02 {
+  font-size: 18px;
+  line-height: 40px;
+}
+.txt-page14-ttl02 {
+  font-size: 12px;
+  line-height: 19px;
+}
+.sec-page14-03 {
+  border: 2px solid #ffffff;
+  position: relative;
+}
+.ttl-page14-03 {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7c23c;
+}
+.sec-page14-03 {
+  margin-top: 80px;
+  padding: 45px 45px 45px 90px;
+}
+.list-page14 .item {
+  display: flex;
+}
+.list-page14 .title {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #ebb94d;
+  font-size: 12px;
+  line-height: 60px;
+}
+.list-page14 .text {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 19px;
+}
