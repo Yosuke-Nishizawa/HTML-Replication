@@ -1557,6 +1557,7 @@ span.marker {
   line-height: 40px;
 }
 .txt-page14-ttl02 {
+  margin-top: 20px;
   font-size: 12px;
   line-height: 19px;
 }
@@ -1565,19 +1566,28 @@ span.marker {
   position: relative;
 }
 .ttl-page14-03 {
-  padding: 20px;
+  padding: 0 20px;
+  width: 255px;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #f7c23c;
+  font-size: 18px;
+  line-height: 29px;
 }
 .sec-page14-03 {
   margin-top: 80px;
-  padding: 45px 45px 45px 90px;
+  padding: 45px 30px;
 }
 .list-page14 .item {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+.list-page14 .item+.item {
+  margin-top: 25px;
 }
 .list-page14 .title {
   width: 60px;
@@ -1589,7 +1599,11 @@ span.marker {
   line-height: 60px;
 }
 .list-page14 .text {
+  margin-left: calc((100% - (60px + 70%))/2);
+  width: 70%;
   color: #ffffff;
   font-size: 12px;
   line-height: 19px;
+  text-align: left;
+  letter-spacing: 1px;
 }
