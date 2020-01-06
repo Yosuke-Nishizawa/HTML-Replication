@@ -1607,3 +1607,31 @@ span.marker {
   text-align: left;
   letter-spacing: 1px;
 }
+@media screen and (min-width:769px) {
+  .ttl-page14-02 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .list-page14-pc .item {
+    margin: 0 auto;
+    padding: 60px 20px 0;
+    width: 250px;
+    height: 250px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  .list-page14-pc .item+.item {
+    margin-top: 30px;
+  }
+  .list-page14-pc .title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 38px;
+    color: #ebb94d;
+  }
+  .list-page14-pc .text {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 1px;
+  }
+}
