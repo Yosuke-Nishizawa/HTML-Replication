@@ -1688,3 +1688,7 @@ span.marker {
     max-width: 1172px;
   }
 }
+/* page15 */
+.sec-page15 {
+  background: url(../img/specialdetailsp.jpg) center/cover no-repeat;
+}
