@@ -1561,8 +1561,7 @@ span.marker {
   font-size: 12px;
   line-height: 19px;
 }
-.sec-page14-03 {
-  border: 2px solid #ffffff;
+.contents-page14 {
   position: relative;
 }
 .ttl-page14-03 {
@@ -1577,6 +1576,7 @@ span.marker {
   line-height: 29px;
 }
 .sec-page14-03 {
+  border: 2px solid #ffffff;
   margin-top: 80px;
   padding: 45px 30px;
 }
@@ -1665,6 +1665,10 @@ span.marker {
   }
 }
 @media screen and (min-width:1191px) {
+  .sec-page14 {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .ttl-page14-02 {
     font-size: 28px;
     line-height: 40px;
@@ -1677,5 +1681,10 @@ span.marker {
     width: 45%;
     font-size: 28px;
     line-height: 45px;
+  }
+  .sec-page14-03 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1172px;
   }
 }
