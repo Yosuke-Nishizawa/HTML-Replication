@@ -1608,13 +1608,30 @@ span.marker {
   letter-spacing: 1px;
 }
 @media screen and (min-width:769px) {
+  .sec-page14 {
+    padding: 65px 40px 40px;
+  }
   .ttl-page14-02 {
     font-size: 24px;
     line-height: 40px;
   }
+  .txt-page14-ttl02 {
+    margin-top: 50px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .sec-page14-03 {
+    margin-top: 130px;
+  }
+  .ttl-page14-03 {
+    width: 400px;
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 38px;
+  }
   .list-page14-pc .item {
     margin: 0 auto;
-    padding: 60px 20px 0;
+    padding: 60px 18px 0;
     width: 250px;
     height: 250px;
     background-color: #ffffff;
@@ -1633,5 +1650,32 @@ span.marker {
     font-size: 14px;
     line-height: 22px;
     letter-spacing: 1px;
+  }
+}
+@media screen and (min-width:992px) {
+  .sec-page14-03 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .list-page14-pc {
+    display: flex;
+  }
+  .list-page14-pc .item+.item {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page14-02 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page14-ttl02 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .ttl-page14-03 {
+    width: 45%;
+    font-size: 28px;
+    line-height: 45px;
   }
 }
