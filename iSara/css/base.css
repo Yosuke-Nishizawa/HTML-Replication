@@ -43,7 +43,7 @@ ul {
   left: 0;
   width: 25px;
   height: 25px;
-  border-top: #ebb94d solid 4px;
+  border-top: # solid 4px;
   border-left: #ebb94d solid 4px;
 }
 .area-braces::after {
@@ -55,6 +55,29 @@ ul {
   height: 25px;
   border-bottom: #ebb94d solid 4px;
   border-right: #ebb94d solid 4px;
+}
+.area-braces-white {
+  position: relative;
+}
+.area-braces-white::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-top: #ffffff solid 4px;
+  border-left: #ffffff solid 4px;
+}
+.area-braces-white::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: #ffffff solid 4px;
+  border-right: #ffffff solid 4px;
 }
 @media screen and (min-width:769px) {
   .area-braces::before {
@@ -1690,5 +1713,28 @@ span.marker {
 }
 /* page15 */
 .sec-page15 {
+  padding: 40px 25px 60px;
   background: url(../img/specialdetailsp.jpg) center/cover no-repeat;
+}
+.ttl-page15-02 {
+  font-size: 18px;
+  line-height: 29px;
+}
+.txt-page15 {
+  font-size: 12px;
+  line-height: 19px;
+}
+.txt-page15-01 {
+  margin-top: 25px;
+}
+.box-page15-braces {
+  margin-top: 40px;
+  padding: 20px 0;
+}
+.ttl-page15-03 {
+  font-size: 18px;
+  line-height: 40px;
+}
+.txt-page15-02 {
+  margin-top: 20px;
 }
