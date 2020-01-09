@@ -88,6 +88,14 @@ ul {
     width: 45px;
     height: 45px;
   }
+  .area-braces-white::before {
+    width: 45px;
+    height: 45px;
+  }
+  .area-braces-white::after {
+    width: 45px;
+    height: 45px;
+  }
 }
 .col {
   padding: 0;
@@ -1737,4 +1745,18 @@ span.marker {
 }
 .txt-page15-02 {
   margin-top: 20px;
+}
+@media screen and (min-width:769px) {
+  .ttl-page15-02 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  .txt-page15 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .ttl-page15-03 {
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
