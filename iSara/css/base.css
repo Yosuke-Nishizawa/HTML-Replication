@@ -1738,6 +1738,9 @@ span.marker {
 .box-page15-braces {
   margin-top: 40px;
   padding: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 860px;
 }
 .ttl-page15-03 {
   font-size: 18px;
@@ -1747,6 +1750,10 @@ span.marker {
   margin-top: 20px;
 }
 @media screen and (min-width:769px) {
+  .sec-page15 {
+    padding: 60px 60px 80px;
+    background-image: url(../img/specialdetail.jpg);
+  }
   .ttl-page15-02 {
     font-size: 24px;
     line-height: 38px;
@@ -1755,8 +1762,25 @@ span.marker {
     font-size: 16px;
     line-height: 26px;
   }
+  .box-page15-braces {
+    padding: 20px 0;
+  }
   .ttl-page15-03 {
     font-size: 24px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page15-02 {
+    font-size: 28px;
+    line-height: 45px;
+  }
+  .txt-page15 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .ttl-page15-03 {
+    font-size: 28px;
     line-height: 40px;
   }
 }
