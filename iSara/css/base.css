@@ -1828,4 +1828,32 @@ span.marker {
   .img-page16-01 {
     margin-top: 60px;
   }
+  .area-page16-text {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width:992px) {
+  .grid-page16 {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .img-page16-01 {
+    width: 22%;
+    margin-top: 0;
+  }
+  .area-page16-text {
+    margin-top: -10px;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width:1191px) {
+  .ttl-page16-02 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .txt-page16-title-02 {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
