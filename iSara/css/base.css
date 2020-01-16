@@ -1856,4 +1856,12 @@ span.marker {
     font-size: 20px;
     line-height: 32px;
   }
+  .grid-page16 {
+    width: 860px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .area-page16-text {
+    margin-left: 30px;
+  }
 }
