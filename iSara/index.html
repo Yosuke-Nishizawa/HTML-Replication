@@ -534,10 +534,16 @@
         </div>
       </section>
     <!-- 17 -->
-      <form id="documentRequest" class="sec-page17">
-        <h2><i class="far fa-file-alt"></i>資料請求フォーム</h2>
-        <p class="txt-page17-title-02">まずは無料で資料請求からどうぞ。</p>
-        <input type="text" name="lastname">
+      <form id="documentRequest" class="sec-page17" action="#" method="GET">
+        <h2 class="ttl-page17-02 s-ls1"><i class="far fa-file-alt"></i>資料請求フォーム</h2>
+        <p class="txt-page17-title-02 s-ls1">まずは無料で資料請求からどうぞ。</p>
+        <div class="area-page17-txt">
+          <input class="input-page17 input-page17-txt" type="text" name="lastname" placeholder="性">
+          <input class="input-page17 input-page17-txt" type="text" name="firstname" placeholder="名">
+          <input class="input-page17 input-page17-txt" type="text" name="mailaddress" placeholder="メールアドレス">
+        </div>
+        <textarea class="input-page17 txtarea-page17" rows="4" placeholder="質問などはこちら（空欄でもOKです）"></textarea>
+        <button class="submit-page17" type="submit">送信</button>
       </form>
     <!-- 18 -->
       <section>

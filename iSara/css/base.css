@@ -1865,3 +1865,40 @@ span.marker {
     margin-left: 30px;
   }
 }
+/* page17 */
+.sec-page17 {
+  padding: 35px 15px 50px;
+  background-color: #ebb94d;
+}
+.ttl-page17-02 {
+  font-size: 18px;
+  line-height: 40px;
+}
+.txt-page17-title-02 {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 19px;
+}
+.area-page17-txt {
+  margin-top: 30px;
+}
+.input-page17 {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
+  border-radius: 5px;
+}
+.input-page17-txt {
+  padding: 15px 10px;
+  margin-top: 25px;
+}
+.txtarea-page17 {
+  margin-top: 50px;
+  padding: 10px;
+}
+.submit-page17 {
+  margin-top: 40px;
+}
