@@ -1901,4 +1901,12 @@ span.marker {
 }
 .submit-page17 {
   margin-top: 40px;
+  padding: .6em 0;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.2em;
+  border-radius: 1.2em;
+  border: none;
+  display: block;
+  width: 100%;
 }
