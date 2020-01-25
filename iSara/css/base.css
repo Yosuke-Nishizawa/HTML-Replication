@@ -1925,3 +1925,15 @@ span.marker {
     margin-right: auto;
   }
 }
+/* page18 */
+.sec-page18 {
+  padding: 45px 15px 40px;
+}
+.ttl-page18-02 {
+  font-size: 18px;
+  line-height: 2.22em;
+}
+.list-page18 {
+  margin-top: 25px;
+  text-align: left;
+}
