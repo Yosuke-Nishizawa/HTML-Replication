@@ -140,6 +140,17 @@ span.marker {
 /* color */
 .s-orange { color: #ebb94d; }
 .s-white { color: #ffffff;}
+/* アコーディオンアロー */
+.arrow-cmn {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  right: 20px;
+  border-bottom: 4px solid #000000;
+  border-right: 4px solid #000000;
+  transform: translate(0, -50%) rotate(45deg);
+}
 /* nav */
 .nav {
   width: 100%;
@@ -1403,16 +1414,6 @@ span.marker {
 .ttl-page12-03:hover {
   text-decoration: underline;
 }
-.arrow-page12 {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  right: 20px;
-  border-bottom: 4px solid #000000;
-  border-right: 4px solid #000000;
-  transform: translate(0, -50%) rotate(45deg);
-}
 .box-page12-list-body {
   padding: 15px 15px 25px;
 }
@@ -1936,4 +1937,27 @@ span.marker {
 .list-page18 {
   margin-top: 25px;
   text-align: left;
+}
+.ttl-page18-03.card-header {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  font-size: 15px;
+  line-height: 1.13em;
+  letter-spacing: 1px;
+  position: relative;
+}
+.ttl-page18-03>.far {
+  color: #016ea9;
+}
+.arrow-page18 {
+  border-bottom-color: #e5e5e5;
+  border-right-color: #e5e5e5;
+}
+.card-body-page18 {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1.66em 1.66em 2.5em;
+  font-size: 12px;
+  line-height: 1.58em;
+  letter-spacing: 1px;
 }
