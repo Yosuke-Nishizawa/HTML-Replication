@@ -1950,6 +1950,10 @@ span.marker {
 .ttl-page18-03>.far {
   color: #016ea9;
 }
+.ttl-page18-03 > .txt:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .arrow-page18 {
   border-bottom-color: #e5e5e5;
   border-right-color: #e5e5e5;
