@@ -2019,3 +2019,15 @@ span.marker {
     line-height: 26px;
   }
 }
+/* footer */
+.footer {
+  background-color: #ececec;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 16px;
+  padding: 20px 0 5px;
+  letter-spacing: .1em;
+}
+.area-share-footer {
+  margin-top: 15px;
+}
