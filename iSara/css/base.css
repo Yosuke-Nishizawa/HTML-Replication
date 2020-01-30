@@ -1994,7 +1994,28 @@ span.marker {
   }
 }
 @media screen and (min-width:1191px) {
+  .sec-page18 {
+    padding: 55px 0 60px;
+  }
   .ttl-page18-02 {
     font-size: 28px;
+  }
+  .list-page18 {
+    width: 76.6%;
+    margin: 40px auto 0;
+  }
+  .ttl-page18-03.card-header {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .arrow-page18 {
+    width: 15px;
+    height: 15px;
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+  }
+  .card-body-page18 {
+    font-size: 16px;
+    line-height: 26px;
   }
 }
