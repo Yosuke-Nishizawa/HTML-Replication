@@ -1,5 +1,32 @@
 @charset "utf-8";
 
+@keyframes heroZoomOut {
+  0% {
+    background-image: url(../img/top_img_base_sp.jpg);
+    background-size: 130%;
+  }
+  33% {
+    background-size: 100%;
+  }
+  33.1% {
+    background-image: url(../img/top_img_base02_sp.jpg);
+    background-size: 130%;
+  }
+  66% {
+    background-size: 100%;
+  }
+  66.1% {
+    background-image: url(../img/top_img_base04_sp.jpg);
+    background-size: 130%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
 .hero {
-  background: url(../img/top_img_base_sp.jpg) no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 116.8vw;
+  animation: heroZoomOut 15s linear infinite ;
 }
