@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <style>
+    .obj {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background: blue;
+    }
+    .case2 {
+      position: relative;
+      width: 50px;
+      height: 50px;
+    }
+    .obj1 {background-color: red;}
+    .obj2 {background-color: green;}
+    .obj3 {background-color: greenyellow;}
+    .imgs {
+      position: relative;
+      width: calc(750px /2);
+      height: calc(876px /2);
+      overflow: hidden;
+    }
+    .imgs>div {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .img1 {
+      background-image: url(../img/top_img_base_sp.jpg);
+      /* z-index: 1;
+      transform: scale(1.2); */
+    }
+    .img2 {background-image: url(../img/top_img_base02_sp.jpg);}
+    .img3 {background-image: url(../img/top_img_base04_sp.jpg);}
+    .box {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <div class="imgs">
+    <div class="img3"></div>
+    <div class="img2"></div>
+    <div class="img1"></div>
+  </div>
+  <div class="obj"></div>
+  <div class="case2 obj1"></div>
+  <div class="case2 obj2"></div>
+  <div class="case2 obj3"></div>
+  <div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <script>
+    // TweenMax.to('.obj', 3.5, {left: 200});
+    // TweenMax.staggerTo(['.obj1', '.obj2', '.obj3'], 3, {left: 200}, 3);
+    // const disappear = () => TweenMax.to('.img1', 1, {opacity: 0});
+    // const disappear = target => {
+    //   console.log(target);
+    //   TweenMax.to(target, 1, {opacity: 0});
+    // };
+    function disappear(target) {
+      console.log(target);
+      TweenMax.to(target.target, 1, {opacity: 0, "z-index":0});
+    }
+    // TweenMax.staggerTo(['.img1'], 3, {transform: 'scale(1)', onComplete: disappear}, 3);
+    // TweenMax.to('.img1', 3, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: [this]});
+    TweenMax.staggerFromTo(['.img1', '.img2', '.img3'], 3,{transform: 'scale(1.2)', "z-index":1}, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: ["{self}"]}, 3);
+    // TweenMax.to('.img1', 1, {opacity: 0});
+// TweenMax.staggerTo(".box", 0.8, {rotation:360, x:120, onComplete:tweenComplete, onCompleteParams:["{self}"]}, 1.2, myCompleteAll);
+function tweenComplete(tween) {
+  console.log('hello');
+}
+
+function myCompleteAll() {
+  console.log('world');
+}
+  </script>
+</body>
+</html>
