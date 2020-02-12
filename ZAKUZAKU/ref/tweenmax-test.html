@@ -2,6 +2,10 @@
 <html>
 <head>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
   <style>
     .obj {
@@ -51,9 +55,9 @@
 </head>
 <body>
   <div class="imgs">
-    <div class="img3"></div>
-    <div class="img2"></div>
-    <div class="img1"></div>
+    <div class="img img3"></div>
+    <div class="img img2"></div>
+    <div class="img img1"></div>
   </div>
   <div class="obj"></div>
   <div class="case2 obj1"></div>
@@ -76,14 +80,14 @@
       TweenMax.set(target.target, {transform: 'scale(1.2)', "z-index":1});
     }
     function disappear(target) {
-      console.log(target);
+      console.log(target)
       TweenMax.to(target.target, 1, {opacity: 0, "z-index":0});
     }
     // TweenMax.staggerTo(['.img1'], 3, {transform: 'scale(1)', onComplete: disappear}, 3);
     // TweenMax.to('.img1', 3, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: [this]});
     // TweenMax.staggerTo(['.img1', '.img2', '.img3'], 3, {transform: 'scale(1)', onStart: setup, onStartParams:["{self}"],onComplete: disappear, onCompleteParams: ["{self}"]}, 3);
     const animateTop = () => 
-      TweenMax.staggerFromTo(['.img1', '.img2', '.img3'], 3,{transform: 'scale(1.2)', "z-index":1, opacity: 1}, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: ["{self}"]}, 3, animateTop);
+      TweenMax.staggerFromTo(['.img1', '.img2', '.img3'], 3,{transform: 'scale(1.2)', "z-index":1, opacity: 1}, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: ["{self}"]}, 3/*, animateTop*/);
     animateTop();
     // TweenMax.to('.img1', 1, {opacity: 0});
 // TweenMax.staggerTo(".box", 0.8, {rotation:360, x:120, onComplete:tweenComplete, onCompleteParams:["{self}"]}, 1.2, myCompleteAll);
