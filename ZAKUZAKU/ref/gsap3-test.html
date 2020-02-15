@@ -38,31 +38,6 @@
     <div class="img img2"></div>
     <div class="img img1"></div>
   </div>
-  <script>
-    function setup(target) {
-      TweenMax.set(target.target, {transform: 'scale(1.2)', "z-index":1});
-    }
-    function disappear(target) {
-      console.log(target)
-      TweenMax.to(target.target, 1, {opacity: 0, "z-index":0});
-    }
-    // TweenMax.staggerTo(['.img1'], 3, {transform: 'scale(1)', onComplete: disappear}, 3);
-    // TweenMax.to('.img1', 3, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: [this]});
-    // TweenMax.staggerTo(['.img1', '.img2', '.img3'], 3, {transform: 'scale(1)', onStart: setup, onStartParams:["{self}"],onComplete: disappear, onCompleteParams: ["{self}"]}, 3);
-    const animateTop = gsap.timeline();
-    animateTop.to('.img1', {scale:1.2, 'z-index':1, duration:3})
-    const animateTop = () => 
-      TweenMax.staggerFromTo(['.img1', '.img2', '.img3'], 3,{transform: 'scale(1.2)', "z-index":1, opacity: 1}, {transform: 'scale(1)', onComplete: disappear, onCompleteParams: ["{self}"]}, 3/*, animateTop*/);
-    animateTop();
-    // TweenMax.to('.img1', 1, {opacity: 0});
-// TweenMax.staggerTo(".box", 0.8, {rotation:360, x:120, onComplete:tweenComplete, onCompleteParams:["{self}"]}, 1.2, myCompleteAll);
-function tweenComplete(tween) {
-  console.log('hello');
-}
-
-function myCompleteAll() {
-  console.log('world');
-}
-  </script>
+  <script src="gsap3-test.js"></script>
 </body>
 </html>
