@@ -1,28 +1,14 @@
 @charset "utf-8";
 
-@keyframes heroZoomOut {
-  0% {
-    background-image: url(../img/top_img_base_sp.jpg);
-    background-size: 130%;
-  }
-  33% {
-    background-size: 100%;
-  }
-  33.1% {
-    background-image: url(../img/top_img_base02_sp.jpg);
-    background-size: 130%;
-  }
-  66% {
-    background-size: 100%;
-  }
-  66.1% {
-    background-image: url(../img/top_img_base04_sp.jpg);
-    background-size: 130%;
-  }
-  100% {
-    background-size: 100%;
-  }
+/* common */
+.index_section {
+  position: relative;
 }
+/* top */
+.index_top {
+  position: relative;
+}
+
 .hero {
   background-position: center;
   background-repeat: no-repeat;
