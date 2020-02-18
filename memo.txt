@@ -90,6 +90,7 @@ Topのアニメーション実現できた！取り込み
 アニメーションはこれで終わり。取り込む
 2020/02/18
 Topの答え合わせ中。index_section_bgのcssから
+index_section_contentから
 
 定規 alt + v
 フォント alt + f
@@ -97,3 +98,8 @@ Topの答え合わせ中。index_section_bgのcssから
 
 ブログネタ---------------
 hero imgはvw, vh使う
+
+【縦横比を保つテク】
+https://design-spice.com/2014/03/24/percentag/
+heightの%は親のheigntに依存するがpaddingはwidthに依存する。
+よって、heightを0にしてpadding-topをwidthに対しての%をすることにより縦横比を保てる
