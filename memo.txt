@@ -91,6 +91,8 @@ Topのアニメーション実現できた！取り込み
 2020/02/18
 Topの答え合わせ中。index_section_bgのcssから
 index_section_contentから
+2020/02/19
+アニメを実装したがうまく動いていない。2枚めの画像が出てこない
 
 定規 alt + v
 フォント alt + f
