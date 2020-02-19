@@ -32,11 +32,11 @@
   overflow: hidden;
 }
 .index_top_bgs>div {
-  opacity: 0;
+  /* opacity: 0; */
 }
 .index_top_mask {
   content: "";
-  position: relative;
+  position: absolute;
   left: 0px;
   bottom: 0px;
   width: 100%;
@@ -73,5 +73,23 @@
   }
   .index_top_bg_03 {
     background: url(../img/top_img_base04_sp.jpg) center center/cover no-repeat;
+  }
+}
+@media (min-width: 800px) {
+  .index_top_bg_01 {
+    background: url(../img/top_img_base_pc.jpg) center center/cover no-repeat;
+  }
+  .index_top_bg_02 {
+    background: url(../img/top_img_base02_pc.jpg) center center/cover no-repeat;
+  }
+  .index_top_bg_03 {
+    background: url(../img/top_img_base04_pc.jpg) center center/cover no-repeat;
+  }
+  .index_top .index_section_bg {
+    min-width: 1000px;
+    padding-top: 100vh;
+  }
+  .index_top .index_section_content .header__logo {
+    height: 278px;
   }
 }
