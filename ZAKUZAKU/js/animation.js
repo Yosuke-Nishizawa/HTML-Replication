@@ -1,3 +1,5 @@
+// const paused = false;
+const paused = true;
 // Top 背景
 (() => {
   const TARGETS = ['.index_top_bg_01', '.index_top_bg_02', '.index_top_bg_03'];
@@ -33,7 +35,9 @@
         .add(createImgAnime(TARGETS[0]))
         .add(createImgAnime(TARGETS[1]))
         .add(createImgAnime(TARGETS[2]));
-  // 再生、無限リピート
-  animateTop.play();
-  animateTop.repeat(-1);
+  if(!paused){
+    // 再生、無限リピート
+    animateTop.play();
+    animateTop.repeat(-1);
+  }
 })();

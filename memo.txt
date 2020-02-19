@@ -93,6 +93,9 @@ Topの答え合わせ中。index_section_bgのcssから
 index_section_contentから
 2020/02/19
 アニメを実装したがうまく動いていない。2枚めの画像が出てこない
+Top実装完了。次にGO
+2020/02/20
+セクションNEW着手HTML作成途中。EVENTコンテンツから
 
 定規 alt + v
 フォント alt + f
