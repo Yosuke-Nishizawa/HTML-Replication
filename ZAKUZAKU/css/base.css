@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* common */
+body {
+  font-family: "Note Sans Japanese", sans-serif;
+}
 .index_section {
   position: relative;
 }
@@ -92,4 +95,13 @@
   .index_top .index_section_content .header__logo {
     height: 278px;
   }
+}
+/* news */
+.index_news {
+  margin-top: 14.6666%;
+}
+.ttl_news {
+  background: url(../img/news_ttl_sp.png) center/auto 31px no-repeat;
+  height: 31px;
+  text-indent: -9999px;
 }
