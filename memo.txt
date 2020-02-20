@@ -97,6 +97,8 @@ Top実装完了。次にGO
 2020/02/20
 セクションNEW着手HTML作成途中。EVENTコンテンツから
 newsの右上の平行四辺形から
+2020/02/21
+padding-topをした子のimgのheightが0になる。position:absoluteしないとだめかも
 
 定規 alt + v
 フォント alt + f
