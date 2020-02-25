@@ -41,3 +41,10 @@ const paused = true;
     animateTop.repeat(-1);
   }
 })();
+// news
+(() =>{
+  const anime =
+    gsap.timeline({paused: true})
+      .to('.index_news_bgs', {left: '-100%', duration:3});
+  anime.play();
+})();
