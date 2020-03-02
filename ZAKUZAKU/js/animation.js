@@ -44,6 +44,24 @@
   })();
   // news //////////////////////////////////////////
   (() =>{
+    // const ORDER = {
+    //   "previous": ".index_news_bg_03",
+    //   "current": ".index_news_bg_01",
+    //   "next": ".index_news_bg_02",
+    // }
+    const ORDER = [".index_news_bg_03", ".index_news_bg_01", ".index_news_bg_02"];
+    const FIRST_INDEX = 0;
+    const SHOWING_INDEX = 1;
+    const END_INDEX = ORDER.length - 1;
+    const slideOrder = slideRight => {
+      if(slideRight) {
+        // 始めの要素切り取り,末尾に追加
+        ORDER.push(ORDER.shift());
+      } else {
+        // 末尾の要素を切り取り、先頭に追加
+        ORDER.unshift(ORDER.pop());
+      }
+    }
     const anime =
       gsap.timeline({paused: true})
         .to('.index_news_bgs', {left: '-100%', duration:3});
