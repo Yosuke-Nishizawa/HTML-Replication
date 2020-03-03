@@ -36,5 +36,19 @@ const animateTop =
 $("#pause").click(function(){
   animateTop.pause();
 });
-animateTop.play();
+// animateTop.play();
 animateTop.repeat(-1);
+const ORDER = ['.img1-1','.img1-2','.img1-3'];
+const slideOrder = () => {
+  ORDER.push(ORDER.shift());
+  console.log(ORDER);
+};
+const slideAnime = gsap.timeline({paused:true})
+          .to([ORDER[1],ORDER[2]],{left:'-50px',duration:3})
+          .set(ORDER[0], {left: '100px'})
+          .call(slideOrder);
+    // .call(()=>{
+    //   gsap.timeline()
+    // });
+slideAnime.play();
+slideAnime.repeat(5);

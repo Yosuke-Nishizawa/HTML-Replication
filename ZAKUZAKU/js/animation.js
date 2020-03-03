@@ -68,10 +68,16 @@
         .to('.index_news_bgs', {left: '-200%', duration:3})
         .call(slideOrder, [true])//slideRight = true
         .set('.index_news_bgs', {left: '-100%'})
-        .set(getOrderItem(0), {order: 0})
-        .set(getOrderItem(1), {order: 1})
-        .set(getOrderItem(2), {order: 2});
-    anime.play();
+        .call(() => {
+          gsap.timeline()
+              .set(ORDER[0], {order: 0})
+              .set(ORDER[1], {order: 1})
+              .set(ORDER[2], {order: 2});
+        });
+        // .set(getOrderItem(0), {order: 0})
+        // .set(getOrderItem(1), {order: 1})
+        // .set(getOrderItem(2), {order: 2});
+    // anime.play();
     anime.repeat(-1);
   })();
 
