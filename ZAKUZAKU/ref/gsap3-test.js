@@ -1,3 +1,53 @@
+(() => {
+  const slideDelay = 1.5;
+  const slideDuration = 0.3;
+  const slides = document.querySelectorAll("#slide-sample .slide");
+  const prevButton = document.querySelector("#prevButton");
+  const nextButton = document.querySelector("#nextButton");
+  const numSlides = slides.length;
+  // for(let i = 0; i < numSlides; i++){
+  //   gsap.set
+  // }
+  gsap.set(slides, {
+    backgroundColor: () => {
+      const num = Math.random() * 0xffffff;
+      return '#' + parseInt(num).toString(16);
+    },
+    xPercent: i => i * 100
+  });
+  const wrapPartial = (min, max) => {
+    const r = max - min;
+    return value => {
+      const v = value - min;
+      return ((r + v % r) % r) + min;
+    }
+  };
+  const wrap = wrapPartial(-100, (numSlides - 1) * 100);
+  const timer = gsap.delayedCall(slideDelay, autoPlay);
+  const animation = gsap.to(slides, {
+    duration: 1,
+    xPercent: "+=" + (numSlides * 100),
+    ease: Linear.easeNone,
+    paused: true,
+    repeat: -1,
+    modifiers: {
+      xPercent: wrap
+    }
+  })
+  const proxy = document.createElement("div");
+  gsap.set(proxy, { x: "+=0"});
+  const transform = gsap.getProperty(proxy);
+  const slideAnimation = gsap.to({}, {duration:0.1});
+  const slideWidth = 0;
+  const wrapWidth = 0;
+  function autoPlay() {
+    if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
+      timer.restart(true);
+    } else {
+      animateSlides(-1);
+    }
+  }
+})();
 const TARGETS = ['.img1', '.img2', '.img3'];
 const getNextTarget = current => {
   const currentIndex = TARGETS.indexOf(current);
@@ -54,7 +104,7 @@ $("#pause").click(function(){
 const slideTargets = document.querySelectorAll('.img1s>div');
 gsap.set(slideTargets, {x:i=>i*50});
 gsap.to('.img1s>div',{
-  repeat: -1,
+  // repeat: -1,
   duration: 3,
   x: "+=150",
   modifiers: {
