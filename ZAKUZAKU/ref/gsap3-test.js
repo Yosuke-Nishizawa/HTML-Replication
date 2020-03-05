@@ -1,4 +1,6 @@
 gsap.registerPlugin(Draggable);
+const testbox = gsap.to("#testbox", {duration:3,x:100, paused:true});
+const testbox2 = TweenMax.to("#testbox", 3,{x:100,paused:true});
 (() => {
   const slideDelay = 1.5;
   const slideDuration = 0.3;
@@ -6,9 +8,6 @@ gsap.registerPlugin(Draggable);
   const prevButton = document.querySelector("#prevButton");
   const nextButton = document.querySelector("#nextButton");
   const numSlides = slides.length;
-  // for(let i = 0; i < numSlides; i++){
-  //   gsap.set
-  // }
   gsap.set(slides, {
     backgroundColor: () => {
       const num = Math.random() * 0xffffff;
@@ -28,7 +27,7 @@ gsap.registerPlugin(Draggable);
   const animation = gsap.to(slides, {
     duration: 1,
     xPercent: "+=" + (numSlides * 100),
-    ease: Linear.easeNone,
+    ease: "none",
     paused: true,
     repeat: -1,
     modifiers: {
@@ -67,7 +66,7 @@ gsap.registerPlugin(Draggable);
     }
   }
   function resize() {
-    const norm = (transform.x / wrapWidth) || 0;
+    const norm = (transform("x") / wrapWidth) || 0;
     slideWidth = slides[0].offsetWidth;
     wrapWidth = slideWidth * numSlides;
     gsap.set(proxy, {x: norm * wrapWidth});
@@ -83,7 +82,7 @@ gsap.registerPlugin(Draggable);
     timer.restart(true);
     slideAnimation.kill();
 
-    const x = snapX(transform.x + direction * slideWidth);
+    const x = snapX(transform("x") + direction * slideWidth);
     slideAnimation = gsap.to(proxy, {
       duration: slideDuration,
       x: x,
@@ -91,7 +90,7 @@ gsap.registerPlugin(Draggable);
     });
   }
   function updateProgress() {
-    animation.progress(transform.x / wrapWidth);
+    animation.progress(transform("x") / wrapWidth);
   }
   function snapX(x) {
     return Math.round(x / slideWidth) * slideWidth;
