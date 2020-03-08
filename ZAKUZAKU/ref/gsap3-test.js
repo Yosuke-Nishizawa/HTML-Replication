@@ -1,6 +1,16 @@
 gsap.registerPlugin(Draggable);
 const testbox = gsap.to("#testbox", {duration:3,x:100, paused:true});
 const testbox2 = TweenMax.to("#testbox", 3,{x:100,paused:true});
+gsap.to("#testbox",{
+  xPercent: "+=" + 100,
+  duration:3,
+  modifiers: {
+    xPercent: x => {
+      console.log(x);
+      return x;
+    }
+  }
+});
 (() => {
   const slideDelay = 1.5;
   const slideDuration = 0.3;

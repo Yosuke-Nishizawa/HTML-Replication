@@ -1,12 +1,12 @@
-#slide-sample * {
+* {
   box-sizing: border-box;
 }
-#slide-sample button {
+button {
   cursor: pointer;
   padding: 8px 16px;
   margin: 10px 5px;
 }
-#slide-sample {
+main {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -15,7 +15,7 @@
   margin: 0 auto;
   border: black solid 3px;
 }
-#slide-sample .controls {
+.controls {
   padding: 10px;
   display: flex;
   align-items: center;
@@ -23,12 +23,12 @@
   height: 70px;
   min-height: 70px;
 }
-#slide-sample .slides-container {
+.slides-container {
   position: relative;
   display: flex;
   flex: 1;
 }
-#slide-sample .slide {
+.slide {
   position: absolute;
   font-size: 90px;
   font-weight: 700;
@@ -39,7 +39,7 @@
   height: 100%;
   width: 100%;
 }
-#slide-sample .slides-inner {
+.slides-inner {
   position: relative;
   height: 100%;
   width: 100%;
