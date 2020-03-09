@@ -31,64 +31,66 @@ const animation = gsap.to(slides, {
     xPercent: wrap
   }
 })
-// const proxy = document.createElement("div");
-// gsap.set(proxy, { x: "+=0"});
-// const transform = gsap.getProperty(proxy);
-// let slideAnimation = gsap.to({}, {duration:0.1});
-// let slideWidth = 0;
-// let wrapWidth = 0;
-// resize();
+const proxy = document.createElement("div");
+gsap.set(proxy, { x: "+=0"});
+const transform = gsap.getProperty(proxy);
+let slideAnimation = gsap.to({}, {duration:0.1});
+let slideWidth = 0;
+let wrapWidth = 0;
+resize();
 
-// const draggable = Draggable.create(proxy, {
-//   trigger: ".slides-container",
-//   onPress: updateDraggable,
-//   onDrag: updateProgress,
-//   onThrowUpdate: updateProgress,
-//   snap: {
-//     x: snapX
-//   }
-// });
-// window.addEventListener("resize", resize);
-// prevButton.addEventListener("click", function(){
-//   animateSlides(1);
-// });
-// nextButton.addEventListener("click", function(){
-//   animateSlides(-1);
-// });
-// function autoPlay() {
-//   if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
-//     timer.restart(true);
-//   } else {
-//     animateSlides(-1);
-//   }
-// }
-// function resize() {
-//   const norm = (transform("x") / wrapWidth) || 0;
-//   slideWidth = slides[0].offsetWidth;
-//   wrapWidth = slideWidth * numSlides;
-//   gsap.set(proxy, {x: norm * wrapWidth});
-//   animateSlides(0);
-//   slideAnimation.progress(1);
-// }
-// function updateDraggable() {
-//   timer.restart(true);
-//   slideAnimation.kill();
-//   this.update();
-// }
-// function animateSlides(direction) {
-//   timer.restart(true);
-//   slideAnimation.kill();
+const draggable = Draggable.create(proxy, {
+  trigger: ".slides-container",
+  onPress: updateDraggable,
+  onDrag: updateProgress,
+  onThrowUpdate: updateProgress,
+  snap: {
+    x: snapX
+  }
+});
+window.addEventListener("resize", resize);
+prevButton.addEventListener("click", function(){
+  animateSlides(1);
+});
+nextButton.addEventListener("click", function(){
+  animateSlides(-1);
+});
+function autoPlay() {
+  if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
+    timer.restart(true);
+  } else {
+    animateSlides(-1);
+  }
+}
+function resize() {
+  const norm = (transform("x") / wrapWidth) || 0;
+  slideWidth = slides[0].offsetWidth;
+  wrapWidth = slideWidth * numSlides;
+  gsap.set(proxy, {x: norm * wrapWidth});
+  animateSlides(0);
+  slideAnimation.progress(1);
+}
+function updateDraggable() {
+  timer.restart(true);
+  slideAnimation.kill();
+  this.update();
+}
+function animateSlides(direction) {
+  timer.restart(true);
+  slideAnimation.kill();
 
-//   const x = snapX(transform("x") + direction * slideWidth);
-//   slideAnimation = gsap.to(proxy, {
-//     duration: slideDuration,
-//     x: x,
-//     onUpdate: updateProgress
-//   });
-// }
-// function updateProgress() {
-//   animation.progress(transform("x") / wrapWidth);
-// }
-// function snapX(x) {
-//   return Math.round(x / slideWidth) * slideWidth;
-// }
+  const x = snapX(transform("x") + direction * slideWidth);
+  slideAnimation = gsap.to(proxy, {
+    duration: slideDuration,
+    x: x,
+    onUpdate: updateProgress
+  });
+}
+function updateProgress() {
+  const v = transform("x") / wrapWidth % 1;
+  const n = v < 0 ? 1 + v : v;
+  animation.progress(n);
+}
+function snapX(x) {
+  return Math.round(x / slideWidth) * slideWidth;
+}
