@@ -115,10 +115,8 @@ a {
 }
 .index_news_bgs {
   margin-top: 20px;
-  position: relative;
   display: flex;
   align-items: flex-start;
-  left: -100%;
 }
 .index_news_bg {
   margin: 0 20px;
@@ -128,15 +126,6 @@ a {
   flex-shrink: 0;
   position: relative;
   background: #000;
-}
-.index_news_bg_01 {
-  order: 1;
-}
-.index_news_bg_02 {
-  order: 2;
-}
-.index_news_bg_03 {
-  order: 0;
 }
 .tag_news {
   position: absolute;

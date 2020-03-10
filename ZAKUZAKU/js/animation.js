@@ -44,41 +44,21 @@
   })();
   // news //////////////////////////////////////////
   (() =>{
-    // const ORDER = {
-    //   "previous": ".index_news_bg_03",
-    //   "current": ".index_news_bg_01",
-    //   "next": ".index_news_bg_02",
-    // }
-    const ORDER = [".index_news_bg_03", ".index_news_bg_01", ".index_news_bg_02"];
-    const FIRST_INDEX = 0;
-    const SHOWING_INDEX = 1;
-    const END_INDEX = ORDER.length - 1;
-    const slideOrder = slideRight => {
-      if(slideRight) {
-        // 始めの要素切り取り,末尾に追加
-        ORDER.push(ORDER.shift());
-      } else {
-        // 末尾の要素を切り取り、先頭に追加
-        ORDER.unshift(ORDER.pop());
-      }
-    }
-    const getOrderItem = index => ORDER[index];
-    const anime =
-      gsap.timeline({paused: true})
-        .to('.index_news_bgs', {left: '-200%', duration:3})
-        .call(slideOrder, [true])//slideRight = true
-        .set('.index_news_bgs', {left: '-100%'})
-        .call(() => {
-          gsap.timeline()
-              .set(ORDER[0], {order: 0})
-              .set(ORDER[1], {order: 1})
-              .set(ORDER[2], {order: 2});
-        });
-        // .set(getOrderItem(0), {order: 0})
-        // .set(getOrderItem(1), {order: 1})
-        // .set(getOrderItem(2), {order: 2});
-    // anime.play();
-    anime.repeat(-1);
+    // drag pluginの追加
+    gsap.registerPlugin(Draggable);
+    // animation発火間隔(s)
+    const SLIDE_DELAY = 1.5;
+    // 1slideのanimation時間
+    const SLIDE_DURATION = 0.3;
+    // 要素
+    // slide群
+    const slides = document.querySelectorAll(".index_news_bg");
+    // 左ボタン
+    const leftButton = document.querySelector(".arrow_news.arrow_left");
+    // 右ボタン
+    const rightButton = document.querySelector(".arrow_news.arrow_right");
+    // slide数
+    const numSlides = slides.length;
   })();
 
 })();

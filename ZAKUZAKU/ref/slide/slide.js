@@ -98,6 +98,7 @@ function init(){
       const num = Math.random() * 0xffffff;
       return '#' + parseInt(num).toString(16);
     },
+    // 位置を横並びにする
     xPercent: i => i * 100
   });
 }
