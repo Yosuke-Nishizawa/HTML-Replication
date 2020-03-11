@@ -120,18 +120,26 @@
       leftButton.addEventListener("click", () => anitemate1Slide(-1));
       // 右ボタンイベント定義
       rightButton.addEventListener("click", () => anitemate1Slide(1));
-      timer = gsap.delayedCall(SLIDE_DELAY, function() {
-        // ドラッグしている場合
-        if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
-          // ディレイして再帰処理
-          timer.restart(true);
-        } else {
-          // 左方向にスライド
-          anitemate1Slide(-1);
-        }
-      })
+      init();
+      // timer = gsap.delayedCall(SLIDE_DELAY, function() {
+      //   // ドラッグしている場合
+      //   if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
+      //     // ディレイして再帰処理
+      //     timer.restart(true);
+      //   } else {
+      //     // 左方向にスライド
+      //     anitemate1Slide(-1);
+      //   }
+      // })
       resize();
     })();
+    // 初期処理
+    function init() {
+      gsap.set(slides, {
+        left: i => (i * -100) + '%',
+        xPercent: i => i * 100
+      });
+    }
     // 与えられたx座標から近いスライドの接点x座標を計算
     function calcSlideSeamX(x) {
       return Math.round(x / slideWidth) * slideWidth;

@@ -119,11 +119,14 @@ a {
   align-items: flex-start;
 }
 .index_news_bg {
-  margin: 0 20px;
-  padding: 10px 10px 15px;
-  /* 100% - margin*/
-  width: calc(100% - 40px);
+  padding: 0 20px;
+  width: 100%;
+  background: #fff;
   flex-shrink: 0;
+  position: relative;
+}
+.index_news_bg_inner {
+  padding: 10px 10px 15px;
   position: relative;
   background: #000;
 }
