@@ -47,12 +47,14 @@
     // drag pluginの追加
     gsap.registerPlugin(Draggable);
     // animation発火間隔(s)
-    const SLIDE_DELAY = 1.5;
+    const SLIDE_DELAY = 5;
     // 1slideのanimation時間
-    const SLIDE_DURATION = 0.3;
+    const SLIDE_DURATION = 1;
     // 要素
     // slide群
     const slides = document.querySelectorAll(".index_news_bg");
+    // slide親要素
+    const slideParent = document.querySelector(".index_news_bgs");
     // 1slideの幅
     let slideWidth = 0;
     // slide全体の合計幅
@@ -65,6 +67,8 @@
     const numSlides = slides.length;
     // 単一slideアニメーション発火制御オブジェクト
     let timer = null;
+    // slide上にmouseが存在するかのフラグ
+    let mouseInSlide = false;
     // 1スライドアニメーション
     let oneSlideAnimation = gsap.to({}, {duration: 0.1});//仮作成
     // 1スライドアニメーションに使用する仮想要素
@@ -98,7 +102,7 @@
     })();
     // ドラッグ制御オブジェクト
     const draggable = Draggable.create(proxy, {
-      trigger: ".index_news_bgs",
+      trigger: slideParent,
       // update draggable
       onPress: function() {
         timer.restart(true);
@@ -120,17 +124,21 @@
       leftButton.addEventListener("click", () => anitemate1Slide(-1));
       // 右ボタンイベント定義
       rightButton.addEventListener("click", () => anitemate1Slide(1));
+      // slide mouse侵入
+      slideParent.addEventListener("mouseenter", () => mouseInSlide = true);
+      // slide mouse侵入
+      slideParent.addEventListener("mouseleave", () => mouseInSlide = false);
       init();
-      // timer = gsap.delayedCall(SLIDE_DELAY, function() {
-      //   // ドラッグしている場合
-      //   if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
-      //     // ディレイして再帰処理
-      //     timer.restart(true);
-      //   } else {
-      //     // 左方向にスライド
-      //     anitemate1Slide(-1);
-      //   }
-      // })
+      timer = gsap.delayedCall(SLIDE_DELAY, function() {
+        // ドラッグしている場合
+        if (draggable.isPressed || draggable.isDragging || draggable.isThrowing || mouseInSlide) {
+          // ディレイして再帰処理
+          timer.restart(true);
+        } else {
+          // 左方向にスライド
+          anitemate1Slide(-1);
+        }
+      })
       resize();
     })();
     // 初期処理

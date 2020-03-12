@@ -174,6 +174,10 @@ slideアニメーションにするには初期のx座標のずれによって�
 
 position.relativeでleftをずらしてすべてを中心に持ってきた上でtransparantでズレを出す方法ならうまくいきそう
 
+slide完成！！！
+
+NEWS一覧 項目を追加して、PCを着手
+
 
 
 ## ショートカット
