@@ -49,7 +49,7 @@
     // animation発火間隔(s)
     const SLIDE_DELAY = 5;
     // 1slideのanimation時間
-    const SLIDE_DURATION = 1;
+    const SLIDE_DURATION = paused ? 99999 : 1;
     // 要素
     // slide群
     const slides = document.querySelectorAll(".index_news_bg");

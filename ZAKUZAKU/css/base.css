@@ -200,3 +200,17 @@ a {
 .arrow_news.arrow_right {
   right: 0;
 }
+.list_news {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+.list_news a {
+  font-size: 15px;
+  line-height: 24px;
+  color: #000;
+}
+.list_news i {
+  margin-left: 5px;
+}

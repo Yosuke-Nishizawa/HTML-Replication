@@ -177,6 +177,9 @@ position.relativeでleftをずらしてすべてを中心に持ってきた上�
 slide完成！！！
 
 NEWS一覧 項目を追加して、PCを着手
+### 2020/03/13
+newsのpc着手。デザインが大きく違うので別でアニメーションを考え直す必要がある。
+まず、テキストブロックのアニメーションの試作から。
 
 
 
@@ -199,3 +202,7 @@ https://showtaki.com/first-work-skills/
 https://design-spice.com/2014/03/24/percentag/
 heightの%は親のheigntに依存するがpaddingはwidthに依存する。
 よって、heightを0にしてpadding-topをwidthに対しての%をすることにより縦横比を保てる
+
+## 参照
+### slide animation
+https://greensock.com/forums/topic/21124-how-to-create-basic-slideshow/
