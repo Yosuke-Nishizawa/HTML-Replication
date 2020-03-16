@@ -183,6 +183,8 @@ newsのpc着手。デザインが大きく違うので別でアニメーショ�
 
 ### 2020/03/16
 news pc animation sandbox作成中
+sandboxできた。
+news txt blockのアニメーション実装から
 
 
 

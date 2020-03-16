@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+}
+.container a {
+  flex-shrink: 0;
+  position: relative;
+}
+.block-a {
+  width: 620px;
+  height: 350px;
+  border: darkblue solid 2px;
+}
+.block-b {
+  position: absolute;
+  bottom: -60px;
+  right: -255px;
+  width: 300px;
+  padding: 30px;
+  background: black;
+}
+.txt-news {
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+}
+.detaillink {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #999999;
+}
