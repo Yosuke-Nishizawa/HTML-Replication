@@ -124,9 +124,12 @@ a {
   flex-shrink: 0;
   position: relative;
 }
-.index_news_bg_inner {
+.index_news_bg_main {
   padding: 10px 10px 15px;
   position: relative;
+  background: #000;
+}
+.index_news_bg_detail {
   background: #000;
 }
 .tag_news {

@@ -185,7 +185,10 @@ newsのpc着手。デザインが大きく違うので別でアニメーショ�
 news pc animation sandbox作成中
 sandboxできた。
 news txt blockのアニメーション実装から
-
+### 2020/03/17
+news pcのまず構造から見直さないとアニメーションができない。
+SPとバランスを取りつつHTML見直し
+スライド１つはできたと思うので残りのスライドと左右の矢印の修正から
 
 
 ## ショートカット
@@ -193,6 +196,9 @@ news txt blockのアニメーション実装から
 * 定規 alt + v
 * フォント alt + f
 * カラー xlt + C
+
+## 模写独自のやり方
+HTML,CSS(SP → PC) → JS(SP → PC)
 
 ## 模写やり方参考サイト
 https://haniwaman.com/replication-coding/#OK-3
