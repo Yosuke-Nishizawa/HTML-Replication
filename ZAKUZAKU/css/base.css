@@ -220,7 +220,11 @@ a {
   margin-left: 5px;
 }
 @media (min-width: 800px) {
+  .index_news_bg {
+    padding: 0;
+  }
   .index_news_bg_inner {
+    width: 75%;
     min-width: 735px;
     max-width: 875px;
     margin: 0 auto;
