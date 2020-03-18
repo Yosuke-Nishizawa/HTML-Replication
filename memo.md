@@ -200,6 +200,12 @@ SPとバランスを取りつつHTML見直し
 
 頭が回らない。とりあえず、幅を変えてキャプチャをXDに貼り、構造を作成する。
 
+### 2020/03/19
+
+XDで設計中。SMLでWidthだけ測ったところ。
+
+それぞれの要素の位置からDivの構成を考えていく
+
 
 
 ## ショートカット
@@ -224,6 +230,10 @@ https://showtaki.com/first-work-skills/
 https://design-spice.com/2014/03/24/percentag/
 heightの%は親のheigntに依存するがpaddingはwidthに依存する。
 よって、heightを0にしてpadding-topをwidthに対しての%をすることにより縦横比を保てる
+
+## memo
+
+widthはスクロールバーも入る
 
 ## 参照
 ### slide animation
