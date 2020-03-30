@@ -248,6 +248,8 @@ paddingが親要素の％に依存するので親のmin-widthを修正するよ�
 
 CodePenで構造作成中
 
+CodePenで構造作成中
+
 ## ショートカット
 
 * 定規 alt + v
