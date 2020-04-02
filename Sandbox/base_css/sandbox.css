@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+div {
+  border: solid 2px;
+  position: relative;
+}
+span {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  writing-mode: vertical-rl;
+}
+.label-middle > span {
+  top: 50%;
+  transform: translatey(-50%);
+}
+.label-bottom > span {
+  top: auto;
+  bottom: 2px;
+}
+div.x { border-color: transparent; } 
+.red { border-color: red; }
+.grey { border-color: grey; }
+.purple { border-color: purple; }
+.green { border-color: green; }
+.orange { border-color: orange; }
+.red > span {
+  background-color: red;
+  color: white;
+}
+.grey > span {
+  background-color: grey;
+}
+.purple > span {
+  background-color: purple;
+  color: white;
+}
+.green > span {
+  background-color: green;
+  color: white;
+}
+.orange > span {
+  background-color: orange;
+}
