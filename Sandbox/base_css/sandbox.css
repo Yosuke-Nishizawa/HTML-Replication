@@ -6,8 +6,8 @@ div {
 }
 .label {
   position: absolute;
-  top: 2px;
-  right: 2px;
+  top: 0px;
+  right: 0px;
   writing-mode: vertical-rl;
   white-space: pre;
 }
@@ -26,6 +26,9 @@ div.x { border-color: transparent; }
 .green { border-color: green; }
 .orange { border-color: orange; }
 .blue { border-color: blue; }
+.xl > .label {
+  visibility: hidden;
+}
 .red > .label {
   background-color: red;
   color: white;
