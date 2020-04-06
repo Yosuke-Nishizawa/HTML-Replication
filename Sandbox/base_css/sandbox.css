@@ -4,17 +4,18 @@ div {
   border: solid 2px;
   position: relative;
 }
-span {
+.label {
   position: absolute;
   top: 2px;
   right: 2px;
   writing-mode: vertical-rl;
+  white-space: pre;
 }
-.label-middle > span {
+.label-middle > .label {
   top: 50%;
   transform: translatey(-50%);
 }
-.label-bottom > span {
+.label-bottom > .label {
   top: auto;
   bottom: 2px;
 }
@@ -24,21 +25,29 @@ div.x { border-color: transparent; }
 .purple { border-color: purple; }
 .green { border-color: green; }
 .orange { border-color: orange; }
-.red > span {
+.blue { border-color: blue; }
+.red > .label {
   background-color: red;
   color: white;
 }
-.grey > span {
+.grey > .label {
   background-color: grey;
 }
-.purple > span {
+.purple > .label {
   background-color: purple;
   color: white;
 }
-.green > span {
+.green > .label {
   background-color: green;
   color: white;
 }
-.orange > span {
+.orange > .label {
   background-color: orange;
+}
+.blue > .label {
+  background-color: blue;
+  color: white;
+}
+.tooltip {
+  background-color: #fff3d4;
 }
