@@ -300,6 +300,10 @@ media queryの差分がわかりにくいのでSASSの本を購入。
 
 届き次第SASSに移行する。
 
+### 2020/04/09
+
+Sass導入！まず、.ttl_newsの部分を修正中。background-sizeが31pxになっているのでそこを48pxにするところから
+
 ## ショートカット
 
 * 定規 alt + v

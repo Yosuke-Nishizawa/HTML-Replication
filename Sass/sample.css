@@ -1,0 +1,30 @@
+ul {
+  background: #000;
+}
+
+ul li {
+  margin-bottom: 2rem;
+}
+
+.test {
+  border-color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.foo {
+  color: blue;
+}
+
+@media screen and (min-width: 800px) {
+  .foo {
+    color: yellow;
+  }
+}
+/*# sourceMappingURL=sample.css.map */

@@ -1,0 +1,32 @@
+ul {
+  background: #000;
+  li {
+    margin-bottom: 2rem;
+  }
+}
+.test {
+  border: {
+    color: #000;
+  }
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+$breakpoints: (
+  'md': 'screen and (min-width: 800px)'
+) !default;
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+  
+}
+.foo {
+  color: blue;
+  @include mq(md) {
+    color: yellow;
+  }
+}
