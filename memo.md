@@ -304,6 +304,12 @@ media queryの差分がわかりにくいのでSASSの本を購入。
 
 Sass導入！まず、.ttl_newsの部分を修正中。background-sizeが31pxになっているのでそこを48pxにするところから
 
+### 2020/04/10
+
+Sassでリファクタリングを少しずつやりながら、PCのStyleに修正。
+
+タイトル下のmargin調整から
+
 ## ショートカット
 
 * 定規 alt + v
