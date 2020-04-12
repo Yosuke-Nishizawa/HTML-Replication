@@ -110,11 +110,23 @@ a {
 /* news */
 .index_news {
   margin-top: 14.6666%;
+  .ttl_news {
+    background: url(../img/news_ttl_sp.png) center/auto 31px no-repeat;
+    height: 31px;
+    text-indent: -9999px;
+    overflow: hidden;
+    @include mq(md) {
+      background-image: url(../img/news_ttl_pc.png);
+      background-size: auto 48px;
+      height: 48px;
+    }
+  }
   .index_section_bg {
     width: 100%;
     overflow: hidden;
     @include mq(md) {
       height: 430px;
+      margin-top: 36px;
       padding: 20px 62px 0 135px;
       position: relative;
     }
@@ -142,17 +154,6 @@ a {
   }
   .index_news_bg_03 .img_news {
     background-image: url(../img/Web-news-1200x700.jpg);
-  }
-}
-.ttl_news {
-  background: url(../img/news_ttl_sp.png) center/auto 31px no-repeat;
-  height: 31px;
-  text-indent: -9999px;
-  overflow: hidden;
-  @include mq(md) {
-    background-image: url(../img/news_ttl_pc.png);
-    background-size: auto 48px;
-    height: 48px;
   }
 }
 .index_news_bgs {
@@ -267,22 +268,44 @@ a {
   text-align: center;
   line-height: 40px;
   font-size: 24px;
+  cursor: pointer;
   @include mq(md) {
     width: 30px;
     height: 60px;
+    opacity: 1;
+    background-color: transparent;
+    color: #000;
+    font-size: 48px;
+    transition: 0.5s;
   }
-  &.arrow_left {
-    left: 0;
-    @include mq(md) {
-      left: 10px;
+  @each $target in (left, right) {
+    &.arrow_#{$target} {
+      #{$target}: 0;
+      @include mq(md) {
+        $gap: 10px;
+        #{$target}: $gap;
+        &:hover {
+          #{$target}: $gap / 2;
+        }
+      }
     }
   }
-  &.arrow_right {
-    right: 0;
-    @include mq(md) {
-      right: 10px;
-    }
-  }
+  // &.arrow_left {
+  //   left: 0;
+  //   @include mq(md) {
+  //     $left: 10px;
+  //     left: $left;
+  //     &:hover {
+  //       left: $left / 2;
+  //     }
+  //   }
+  // }
+  // &.arrow_right {
+  //   right: 0;
+  //   @include mq(md) {
+  //     right: 10px;
+  //   }
+  // }
 }
 .list_news {
   margin-top: 10px;
