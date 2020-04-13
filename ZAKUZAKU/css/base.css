@@ -298,6 +298,38 @@ a {
 .txt_news.link_details {
   margin-top: 15px;
   color: #999;
+  position: relative;
+  display: inline-block;
+}
+
+@media screen and (min-width: 800px) {
+  .txt_news.link_details {
+    margin-top: 30px;
+    font-weight: 700;
+  }
+}
+
+.txt_news.link_details::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #999;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.txt_news.link_details:hover::after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .txt_news.link_details i {
@@ -305,9 +337,37 @@ a {
 }
 
 @media screen and (min-width: 800px) {
-  .txt_news.link_details {
-    margin-top: 30px;
-    font-weight: 700;
+  .txt_news.link_details:hover i {
+    -webkit-animation: anime-linkdetail-i .4s;
+            animation: anime-linkdetail-i .4s;
+  }
+  @-webkit-keyframes anime-linkdetail-i {
+    0% {
+      -webkit-transform: translate(0, 0) rotateX(0deg);
+              transform: translate(0, 0) rotateX(0deg);
+    }
+    50% {
+      -webkit-transform: translate(5px, 0) rotateX(90deg);
+              transform: translate(5px, 0) rotateX(90deg);
+    }
+    100% {
+      -webkit-transform: translate(0, 0) rotateX(180deg);
+              transform: translate(0, 0) rotateX(180deg);
+    }
+  }
+  @keyframes anime-linkdetail-i {
+    0% {
+      -webkit-transform: translate(0, 0) rotateX(0deg);
+              transform: translate(0, 0) rotateX(0deg);
+    }
+    50% {
+      -webkit-transform: translate(5px, 0) rotateX(90deg);
+              transform: translate(5px, 0) rotateX(90deg);
+    }
+    100% {
+      -webkit-transform: translate(0, 0) rotateX(180deg);
+              transform: translate(0, 0) rotateX(180deg);
+    }
   }
 }
 
