@@ -145,9 +145,23 @@ a {
   }
 }
 
+.index_news .index_news_bg_main {
+  padding: 10px 10px 15px;
+  position: relative;
+  background: #000;
+}
+
+@media screen and (min-width: 800px) {
+  .index_news .index_news_bg_main {
+    width: 620px;
+    height: 350px;
+  }
+}
+
 .index_news .img_wrapper {
   padding-top: 55%;
   position: relative;
+  overflow: hidden;
 }
 
 .index_news .img_news {
@@ -162,15 +176,29 @@ a {
   background-repeat: no-repeat;
 }
 
-.index_news .index_news_bg_01 .img_news {
+@media screen and (min-width: 800px) {
+  .index_news .img_news {
+    -webkit-transition: opacity 1.2s, -webkit-transform 5s;
+    transition: opacity 1.2s, -webkit-transform 5s;
+    transition: opacity 1.2s, transform 5s;
+    transition: opacity 1.2s, transform 5s, -webkit-transform 5s;
+  }
+  .index_news .img_news:hover {
+    opacity: .6;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.index_news_bg_01 .img_news {
   background-image: url(../img/tomozaku-1200x700.jpg);
 }
 
-.index_news .index_news_bg_02 .img_news {
+.index_news_bg_02 .img_news {
   background-image: url(../img/whitechocolatezaku_1_72-1200x700.jpg);
 }
 
-.index_news .index_news_bg_03 .img_news {
+.img_news .index_news_bg_03 .img_news {
   background-image: url(../img/Web-news-1200x700.jpg);
 }
 
@@ -217,19 +245,6 @@ a {
     max-width: 875px;
     position: relative;
     margin: 0 auto;
-  }
-}
-
-.index_news_bg_main {
-  padding: 10px 10px 15px;
-  position: relative;
-  background: #000;
-}
-
-@media screen and (min-width: 800px) {
-  .index_news_bg_main {
-    width: 620px;
-    height: 350px;
   }
 }
 
