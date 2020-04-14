@@ -1,0 +1,21 @@
+.screen {
+  display: flex;
+}
+.slide {
+  width: (100% / 3);
+  height: 400px;
+  flex-shrink: 0;
+  position: relative;
+}
+.img {
+  width: 70%;
+  height: 80%;
+}
+.detail {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: purple;
+}
