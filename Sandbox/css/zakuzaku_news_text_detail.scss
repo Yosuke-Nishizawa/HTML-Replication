@@ -1,3 +1,6 @@
+#seekbar {
+  width: 100%;
+}
 .screen {
   display: flex;
 }
@@ -16,6 +19,7 @@
   height: 40%;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -30px;
+  opacity: 0;
   background: purple;
 }

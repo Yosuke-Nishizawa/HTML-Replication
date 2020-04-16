@@ -100,6 +100,19 @@
         }
       })
     })();
+    // スライドテキスト部分アニメーション
+    const slideTextAnimation = 
+      gsap.to(".index_news_bg_detail", {
+        'bottom': 0,
+        'opacity': 1,
+        duration: 5,
+        ease: "none",
+        paused: true,
+        stagger: {
+          each: 5,
+          from: "start"
+        }
+      });
     // ドラッグ制御オブジェクト
     const draggable = Draggable.create(proxy, {
       trigger: slideParent,
