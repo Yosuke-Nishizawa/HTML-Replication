@@ -1,6 +1,6 @@
 (() => {
-  const paused = false;
-  // const paused = true;
+  // const paused = false;
+  const paused = true;
   // 次の対象を取得
   const getNextTarget = (current, targets) => {
     const currentIndex = targets.indexOf(current);
@@ -59,6 +59,8 @@
     let slideWidth = 0;
     // slide全体の合計幅
     let entireSlideWidth = 0;
+    // 詳細テキスト要素
+    const detailTxts = document.querySelectorAll(".index_news_bg_detail");
     // 左ボタン
     const leftButton = document.querySelector(".arrow_news.arrow_left");
     // 右ボタン
@@ -102,14 +104,14 @@
     })();
     // スライドテキスト部分アニメーション
     const slideTextAnimation = 
-      gsap.to(".index_news_bg_detail", {
+      gsap.to(detailTxts, {
         'bottom': 0,
         'opacity': 1,
-        duration: 5,
+        duration: 1 / 3,
         ease: "none",
         paused: true,
         stagger: {
-          each: 5,
+          each: 1 / 3,
           from: "start"
         }
       });
@@ -160,6 +162,11 @@
         left: i => (i * -100) + '%',
         xPercent: i => i * 100
       });
+      //詳細テキスト部分
+      gsap.set(detailTxts, {
+        bottom: -30,
+        opacity: 0
+      });
     }
     // 与えられたx座標から近いスライドの接点x座標を計算
     function calcSlideSeamX(x) {
@@ -169,6 +176,7 @@
     function updateEntireSlideAnimation() {
       const progress = proxyProperty("x") / entireSlideWidth;
       entireSlideAnimation.progress(progress);
+      slideTextAnimation.progress(progress);
     }
     // 1slideスライドさせる
     // direction: スライド方向, -1:左, 1:右

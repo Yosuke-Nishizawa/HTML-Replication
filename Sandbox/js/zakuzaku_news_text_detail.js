@@ -9,10 +9,6 @@ const anime = gsap.to(".detail", {
                         from: "start"
                       }
                     });
-const playButton = document.getElementById("play");
-playButton.addEventListener("click", function() {
-  anime.play();
-})
 const reverseButton = document.getElementById("reverse");
 reverseButton.addEventListener("click", function() {
   anime.reverse();
@@ -25,3 +21,20 @@ const setSeekbarVal = function(){
 }
 seekbar.addEventListener("change", setSeekbarVal);
 seekbar.addEventListener("input", setSeekbarVal);
+
+const proxy = document.createElement("div");
+const proxyProp = gsap.getProperty(proxy);
+console.log(proxyProp("x"));
+const seekAnime = gsap.to(proxy, {
+  duration: 1,
+  x: 100,
+  ease: "none",
+  paused: true,
+  onUpdate: function() {
+    seekbar.value = proxyProp("x");
+  }
+})
+const playButton = document.getElementById("play");
+playButton.addEventListener("click", function() {
+  seekAnime.play();
+})
