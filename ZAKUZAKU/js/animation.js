@@ -1,6 +1,6 @@
 (() => {
-  // const paused = false;
-  const paused = true;
+  const paused = false;
+  // const paused = true;
   // 次の対象を取得
   const getNextTarget = (current, targets) => {
     const currentIndex = targets.indexOf(current);
@@ -107,11 +107,11 @@
       gsap.to(detailTxts, {
         'bottom': 0,
         'opacity': 1,
-        duration: 1 / 3,
+        duration: 5,
         ease: "none",
         paused: true,
         stagger: {
-          each: 1 / 3,
+          each: SLIDE_DELAY,
           from: "start"
         }
       });
@@ -177,6 +177,7 @@
       const progress = proxyProperty("x") / entireSlideWidth;
       entireSlideAnimation.progress(progress);
       slideTextAnimation.progress(progress);
+      console.log(progress);
     }
     // 1slideスライドさせる
     // direction: スライド方向, -1:左, 1:右

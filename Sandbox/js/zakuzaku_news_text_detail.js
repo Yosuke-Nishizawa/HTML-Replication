@@ -33,6 +33,27 @@ const seekAnime = gsap.to(proxy, {
   onUpdate: function() {
     seekbar.value = proxyProp("x");
   }
+});
+const timer = gsap.delayedCall(5, function() {
+  timer.restart(true);
+  const x = proxyProp("x") + (100 / 3);
+  const smallProxy = document.createElement("div");
+  gsap.set(smallProxy, {x: proxyProp("x")});
+  gsap.to(smallProxy, {
+    duration: 1,
+    x: x,
+    onUpdate: function() {
+      const progress = gsap.getProperty(smallProxy, "x") / 100;
+      seekAnime.progress(progress);
+      anime.progress(progress);
+    },
+    modifiers: {
+      x: x => {
+        const newX = (100 + parseFloat(x)) % 100;
+        return newX + "px";
+      }
+    }
+  })
 })
 const playButton = document.getElementById("play");
 playButton.addEventListener("click", function() {
