@@ -1,6 +1,6 @@
 (() => {
-  const paused = false;
-  // const paused = true;
+  // const paused = false;
+  const paused = true;
   // 次の対象を取得
   const getNextTarget = (current, targets) => {
     const currentIndex = targets.indexOf(current);

@@ -6,9 +6,37 @@ const anime = gsap.to(".detail", {
                      paused: true,
                       stagger: {
                         each: 5,
-                        from: "start"
+                        from: [2, 0, 1]
+                        // from: "start"
                       }
                     });
+const details = document.querySelectorAll(".detail");
+const anime2 = 
+        gsap.timeline({
+          paused: true, 
+          defaults: {
+            'bottom': 0,
+            'opacity': 1,
+             duration: 5,
+             ease: "none",
+          }
+        })
+        .to(details[0], {})
+        .to(details[1], {})
+        .to(details[2], {});
+const anime3 = 
+        gsap.timeline({
+          paused: true, 
+          defaults: {
+            'bottom': -30,
+            'opacity': 0,
+             duration: 5,
+             ease: "none",
+          }
+        })
+        .to(details[2], {})
+        .to(details[0], {})
+        .to(details[1], {});
 const reverseButton = document.getElementById("reverse");
 reverseButton.addEventListener("click", function() {
   anime.reverse();
@@ -17,10 +45,11 @@ const seekbar = document.getElementById("seekbar");
 const setSeekbarVal = function(){
   const val = this.value;
   document.getElementById("seekbarVal").textContent = val;
-  anime.progress(parseFloat(val) / 100);
+  anime2.progress(parseFloat(val) / 100);
+  anime3.progress(parseFloat(val) / 100);
 }
-seekbar.addEventListener("change", setSeekbarVal);
-seekbar.addEventListener("input", setSeekbarVal);
+// seekbar.addEventListener("change", setSeekbarVal);
+// seekbar.addEventListener("input", setSeekbarVal);
 
 const proxy = document.createElement("div");
 const proxyProp = gsap.getProperty(proxy);
@@ -44,8 +73,10 @@ const timer = gsap.delayedCall(5, function() {
     x: x,
     onUpdate: function() {
       const progress = gsap.getProperty(smallProxy, "x") / 100;
+      console.log(progress);
       seekAnime.progress(progress);
-      anime.progress(progress);
+      anime2.progress(progress);
+      anime3.progress(progress);
     },
     modifiers: {
       x: x => {
@@ -59,3 +90,9 @@ const playButton = document.getElementById("play");
 playButton.addEventListener("click", function() {
   seekAnime.play();
 })
+document.getElementById("pause").addEventListener("click", function(){
+  timer.pause();
+});
+document.getElementById("restart").addEventListener("click", function(){
+  timer.resume();
+});
