@@ -12,24 +12,54 @@ const anime = gsap.to(".detail", {
                     });
 const details = document.querySelectorAll(".detail");
 const anime2 = 
-        gsap.timeline({
+    (function(){
+        const from = {'bottom': -30, 'opacity': 0};
+        const up = {
+          'bottom': '+=30',
+          'opacity': '+=1',
+        };
+        const down = {
+          'bottom': '-=30',
+          'opacity': '-=1',
+        };
+        return gsap.timeline({
+          repeat: -1,
           paused: true, 
           defaults: {
-            'bottom': 0,
-            'opacity': 1,
              duration: 5,
              ease: "none",
           }
         })
-        .to(details[0], {})
-        .to(details[1], {})
-        .to(details[2], {});
+        .to(details[0], up, 'start').to(details[2], down, 'start')
+        .to(details[1], up, 'start+=5').to(details[0], down, 'start+=5')
+        .to(details[2], up, 'start+=10').to(details[1], down, 'start+=10');
+        // return gsap.timeline({
+        //   repeat: -1,
+        //   paused: true, 
+        //   defaults: {
+        //     // 'bottom': 0,
+        //     // 'opacity': 1,
+        //     'bottom': '+=30',
+        //     'opacity': '+=1',
+        //      duration: 5,
+        //      ease: "none",
+        //   }
+        // })
+        // .to(details[0], {})
+        // .to(details[1], {})
+        // .to(details[2], {});
+    })();
 const anime3 = 
-        gsap.timeline({
+    (function(){
+        const from = {'bottom': 0, 'opacity': 1};
+        return gsap.timeline({
+          repeat: -1,
           paused: true, 
           defaults: {
-            'bottom': -30,
-            'opacity': 0,
+            'bottom': '-=30',
+            'opacity': '-=1',
+            // 'bottom': -30,
+            // 'opacity': 0,
              duration: 5,
              ease: "none",
           }
@@ -37,6 +67,7 @@ const anime3 =
         .to(details[2], {})
         .to(details[0], {})
         .to(details[1], {});
+    })();
 const reverseButton = document.getElementById("reverse");
 reverseButton.addEventListener("click", function() {
   anime.reverse();
@@ -76,7 +107,7 @@ const timer = gsap.delayedCall(5, function() {
       console.log(progress);
       seekAnime.progress(progress);
       anime2.progress(progress);
-      anime3.progress(progress);
+      // anime3.progress(progress);
     },
     modifiers: {
       x: x => {
