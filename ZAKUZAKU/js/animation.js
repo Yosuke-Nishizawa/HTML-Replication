@@ -1,6 +1,6 @@
 (() => {
-  // const paused = false;
-  const paused = true;
+  const paused = false;
+  // const paused = true;
   // 次の対象を取得
   const getNextTarget = (current, targets) => {
     const currentIndex = targets.indexOf(current);
@@ -104,17 +104,39 @@
     })();
     // スライドテキスト部分アニメーション
     const slideTextAnimation = 
-      gsap.to(detailTxts, {
-        'bottom': 0,
-        'opacity': 1,
-        duration: 5,
-        ease: "none",
-        paused: true,
-        stagger: {
-          each: SLIDE_DELAY,
-          from: "start"
-        }
-      });
+      (function(){
+        const duration = 5;
+        const timeline = 
+          gsap.timeline({
+            paused: true,
+            defaults: {
+              duration: duration,
+              ease: "none",
+            }
+          });
+        const up = {'bottom': 0,'opacity': 1,};
+        const down = {'bottom': -30,'opacity': 0,};
+        return Array.from(detailTxts).reduce((tl, element, idx, src) =>{
+          // 次のidx。最後の場合0
+          const nextIdx = idx + 1 % src.length;
+          // 基準ラベル('start')+=秒数
+          // 基準ラベルが定義されていない場合、はじめに設定したときに定義される
+          const label = `start+=${idx * duration}`;
+          return tl.to(element, down, label).to(src[nextIdx], up, label);
+        },timeline);
+        // gsap.to(detailTxts, {
+        //   'bottom': 0,
+        //   'opacity': 1,
+        //   duration: 5,
+        //   ease: "none",
+        //   paused: true,
+        //   stagger: {
+        //     each: SLIDE_DELAY,
+        //     from: "start"
+        //   }
+      // });
+
+      })();
     // ドラッグ制御オブジェクト
     const draggable = Draggable.create(proxy, {
       trigger: slideParent,

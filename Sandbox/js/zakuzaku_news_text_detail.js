@@ -15,12 +15,16 @@ const anime2 =
     (function(){
         const from = {'bottom': -30, 'opacity': 0};
         const up = {
-          'bottom': '+=30',
-          'opacity': '+=1',
+          'bottom': '30',
+          'opacity': '1',
+          // 'bottom': '+=30',
+          // 'opacity': '+=1',
         };
         const down = {
-          'bottom': '-=30',
-          'opacity': '-=1',
+          'bottom': '0',
+          'opacity': '0',
+          // 'bottom': '-=30',
+          // 'opacity': '-=1',
         };
         return gsap.timeline({
           repeat: -1,
@@ -30,7 +34,7 @@ const anime2 =
              ease: "none",
           }
         })
-        .to(details[0], up, 'start').to(details[2], down, 'start')
+        .to(details[0], up, 'start+=0').to(details[2], down, 'start+=0')
         .to(details[1], up, 'start+=5').to(details[0], down, 'start+=5')
         .to(details[2], up, 'start+=10').to(details[1], down, 'start+=10');
         // return gsap.timeline({
