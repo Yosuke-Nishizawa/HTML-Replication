@@ -118,7 +118,7 @@
         const down = {'bottom': -30,'opacity': 0,};
         return Array.from(detailTxts).reduce((tl, element, idx, src) =>{
           // 次のidx。最後の場合0
-          const nextIdx = idx + 1 % src.length;
+          const nextIdx = (idx + 1) % src.length;
           // 基準ラベル('start')+=秒数
           // 基準ラベルが定義されていない場合、はじめに設定したときに定義される
           const label = `start+=${idx * duration}`;
@@ -184,8 +184,10 @@
         left: i => (i * -100) + '%',
         xPercent: i => i * 100
       });
-      //詳細テキスト部分
-      gsap.set(detailTxts, {
+      //詳細テキスト部分非表示(先頭以外)
+      const targetDetailTxts = Array.from(detailTxts);
+      targetDetailTxts.shift();
+      gsap.set(targetDetailTxts, {
         bottom: -30,
         opacity: 0
       });
@@ -198,8 +200,7 @@
     function updateEntireSlideAnimation() {
       const progress = proxyProperty("x") / entireSlideWidth;
       entireSlideAnimation.progress(progress);
-      slideTextAnimation.progress(progress);
-      console.log(progress);
+      slideTextAnimation.progress(1 - progress);
     }
     // 1slideスライドさせる
     // direction: スライド方向, -1:左, 1:右
