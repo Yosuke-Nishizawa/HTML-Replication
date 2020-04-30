@@ -27,6 +27,9 @@
   <section id="top" class="index_section index_top">
     <div class="index_section_bg">
       <div class="index_top_bgs">
+        <?php
+          
+        ?>
         <div class="index_top_bg_03"></div>
         <div class="index_top_bg_02"></div>
         <div class="index_top_bg_01"></div>

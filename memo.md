@@ -386,6 +386,11 @@ index.html→index.phpにした。
 
 キャッシュが効いてしまうのでApacheの設定を変えようとしているがうまく行かないので引き続き調べる。
 
+### 2020/05/01
+キャシュ問題解決。
+HTML内でループする方法を探している。
+echo の省略記法と棘カッコを使用した文字列フォーマットを組み合わせる
+
 ## ショートカット
 
 * 定規 alt + v
@@ -408,7 +413,12 @@ https://showtaki.com/first-work-skills/
 https://design-spice.com/2014/03/24/percentag/
 heightの%は親のheigntに依存するがpaddingはwidthに依存する。
 よって、heightを0にしてpadding-topをwidthに対しての%をすることにより縦横比を保てる
-
+### htdocsの下に置かなくても参照できるようにする
+```
+cd C:\xampp\htdocs
+mklink /d test "C:\work\test"
+```
+https://qiita.com/re-24/items/746c2e3a4dfdf4327da8
 ## memo
 
 widthはスクロールバーも入る

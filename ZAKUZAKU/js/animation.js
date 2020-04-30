@@ -1,6 +1,6 @@
 (() => {
-  const paused = false;
-  // const paused = true;
+  // const paused = false;
+  const paused = true;
   // 次の対象を取得
   const getNextTarget = (current, targets) => {
     const currentIndex = targets.indexOf(current);
@@ -47,7 +47,7 @@
     // drag pluginの追加
     gsap.registerPlugin(Draggable);
     // animation発火間隔(s)
-    const SLIDE_DELAY = 5;
+    const SLIDE_DELAY = paused ? 99999 : 5;
     // 1slideのanimation時間
     const SLIDE_DURATION = paused ? 99999 : 1;
     // 要素
@@ -124,18 +124,6 @@
           const label = `start+=${idx * duration}`;
           return tl.to(element, down, label).to(src[nextIdx], up, label);
         },timeline);
-        // gsap.to(detailTxts, {
-        //   'bottom': 0,
-        //   'opacity': 1,
-        //   duration: 5,
-        //   ease: "none",
-        //   paused: true,
-        //   stagger: {
-        //     each: SLIDE_DELAY,
-        //     from: "start"
-        //   }
-      // });
-
       })();
     // ドラッグ制御オブジェクト
     const draggable = Draggable.create(proxy, {
