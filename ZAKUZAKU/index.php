@@ -1,3 +1,6 @@
+<?php
+  $i = function($v) { return $v; };
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -28,11 +31,11 @@
     <div class="index_section_bg">
       <div class="index_top_bgs">
         <?php
-          
+          foreach(range(3, 1) as $v) {
+            $num = sprintf('%02d', $v);
+            echo "<div class=\"index_top_bg_{$num}\"></div>";
+          }
         ?>
-        <div class="index_top_bg_03"></div>
-        <div class="index_top_bg_02"></div>
-        <div class="index_top_bg_01"></div>
       </div>
       <!-- /.index_top_bgs -->
     </div>
