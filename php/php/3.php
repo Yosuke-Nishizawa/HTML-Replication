@@ -22,9 +22,5 @@ class News
 $news = new News('EVENT', '学生証提示で');
 echo $news->tag;
 echo $news->detailTxt;
-$arr = [1, 2, 3];
-foreach ($arr as $i => $v) {
-  echo "{$i}:{$v}";
-  unset($v);
-}
+
 ?>

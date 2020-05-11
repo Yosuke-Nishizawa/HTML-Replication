@@ -1,5 +1,5 @@
 <?php
-  $i = function($v) { return $v; };
+  require_once 'php/base.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -51,48 +51,30 @@
     <h2 class="ttl_news">NEWS</h2>
     <div class="index_section_bg">
       <div class="index_news_bgs"><!--スライド群-->
-        <a class="index_news_bg index_news_bg_01" href="#">
+        <?php 
+        $newsArr = [
+          new News('EVENT', '学生証提示でお得な「友ザク」キャンペーンをお見逃しなく！'),
+          new News('FLAVOR', '「ホワイトチョコレートチョコレートザク」が登場！お友だちとのご来店でお得な「友ザク」も実施中！'),
+          new News('INFO', 'ザクザクLINE@での「友だち追加」のご案内'),
+        ];
+        foreach ($newsArr as $index => $news) :
+          $num = sprintf('%02d', $index + 1);
+        ?>
+        <a class="index_news_bg index_news_bg_<?= $num ?>" href="#">
           <div class="index_news_bg_inner">
             <div class="index_news_bg_main">
-              <p class="tag_news">EVENT</p>
+              <p class="tag_news"><?= $news->tag ?></p>
               <div class="img_wrapper">
                 <div class="img_news"></div>
               </div>
             </div>
             <div class="index_news_bg_detail">
-              <p class="txt_news txt_desc">学生証提示でお得な「友ザク」キャンペーンをお見逃しなく！</p>
+              <p class="txt_news txt_desc"><?= $news->detailTxt ?></p>
               <p class="txt_news link_details">詳細はこちら<i class="fas fa-chevron-right"></i></p>
             </div>
           </div>
         </a>
-        <a class="index_news_bg index_news_bg_02" href="#">
-          <div class="index_news_bg_inner">
-            <div class="index_news_bg_main">
-              <p class="tag_news">FLAVOR</p>
-              <div class="img_wrapper">
-                <div class="img_news"></div>
-              </div>
-            </div>
-            <div class="index_news_bg_detail">
-              <p class="txt_news txt_desc">「ホワイトチョコレートチョコレートザク」が登場！お友だちとのご来店でお得な「友ザク」も実施中！</p>
-              <p class="txt_news link_details">詳細はこちら<i class="fas fa-chevron-right"></i></p>
-            </div>
-          </div>
-        </a>
-        <a class="index_news_bg index_news_bg_03" href="#">
-          <div class="index_news_bg_inner">
-            <div class="index_news_bg_main">
-              <p class="tag_news">INFO</p>
-              <div class="img_wrapper">
-                <div class="img_news"></div>
-              </div>
-            </div>
-            <div class="index_news_bg_detail">
-              <p class="txt_news txt_desc">ザクザクLINE@での「友だち追加」のご案内</p>
-              <p class="txt_news link_details">詳細はこちら<i class="fas fa-chevron-right"></i></p>
-            </div>
-          </div>
-        </a>
+        <?php endforeach ?>
       </div>
       <div class="container_news_arrow">
         <div class="arrow_news arrow_left"><i class="fas fa-chevron-left"></i></div>
