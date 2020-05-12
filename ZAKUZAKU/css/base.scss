@@ -27,6 +27,17 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 }
+.sp {
+  @include mq(md) {
+    display: none;
+  }
+}
+.pc {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
 /* top */
 .index_top {
   position: relative;

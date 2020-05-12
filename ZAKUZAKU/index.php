@@ -68,10 +68,12 @@
                 <div class="img_news"></div>
               </div>
             </div>
-            <div class="index_news_bg_detail">
+            <?php foreach(['sp', 'pc'] as $deviceCss): ?>
+            <div class="index_news_bg_detail <?= $deviceCss ?>">
               <p class="txt_news txt_desc"><?= $news->detailTxt ?></p>
               <p class="txt_news link_details">詳細はこちら<i class="fas fa-chevron-right"></i></p>
             </div>
+            <?php endforeach ?>
           </div>
         </a>
         <?php endforeach ?>
