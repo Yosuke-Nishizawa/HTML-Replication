@@ -1,36 +1,41 @@
-$breakpoints: (
-  'md': 'screen and (min-width: 800px)'
-) !default;
-@mixin mq($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-.concept {
-  @include mq(md) {
+@media screen and (min-width: 800px) {
+  .concept {
     min-width: 1015px;
   }
 }
+
 .concept-container {
   width: 315px;
   margin: 0 auto;
-  @include mq(md) {
+}
+
+@media screen and (min-width: 800px) {
+  .concept-container {
     width: 735px;
   }
 }
+
 .concept-title {
   height: 30px;
   background: url(../img/concept_ttl_sp.png) center/contain no-repeat;
-  @include mq(md) {
+}
+
+@media screen and (min-width: 800px) {
+  .concept-title {
     height: 50px;
     background-image: url(../img/h1_1_pc.png);
   }
 }
+
 .concept-img {
   height: 100px;
   background: url(../img/concept_img_01_sp.jpg) center/contain no-repeat;
-  @include mq(md) {
+}
+
+@media screen and (min-width: 800px) {
+  .concept-img {
     height: 190px;
     background-image: url(../img/concept_img_01_pc.jpg);
   }
 }
+/*# sourceMappingURL=zakuzaku_concept.css.map */

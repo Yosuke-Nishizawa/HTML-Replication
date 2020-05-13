@@ -410,6 +410,10 @@ NEWS完成！
 
 Conceptに移行。まず、HTML構成だが、そもそもCSSの命名規則にいつも迷っているので本を購入。明日届く。それまでにSandboxでHTMLを構成。
 
+### 2020/05/14
+
+concept sandboxでpc構成中
+
 ## ショートカット
 
 * 定規 alt + v
