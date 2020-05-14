@@ -414,6 +414,10 @@ Conceptに移行。まず、HTML構成だが、そもそもCSSの命名規則に
 
 concept sandboxでpc構成中
 
+### 2020/05/15
+
+CSS設計勉強中
+
 ## ショートカット
 
 * 定規 alt + v
