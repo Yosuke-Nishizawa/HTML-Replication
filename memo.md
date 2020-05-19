@@ -426,6 +426,10 @@ CSS設計勉強中（BEM）
 
 実践を開始したのはいいが、早速wipe-cssの導入方法がわからなくて躓き中
 
+### 2020/05/20
+
+header実践中。HTML作成途中
+
 ## ショートカット
 
 * 定規 alt + v
@@ -459,6 +463,10 @@ https://qiita.com/re-24/items/746c2e3a4dfdf4327da8
 widthはスクロールバーも入る
 
 サイト模写ではSEO対策までは学ぶことができない。見た目しか模写できないため。
+
+### Emmetすごい！
+
+VSCodeでは標準でサポート
 
 ## 参照
 ### slide animation

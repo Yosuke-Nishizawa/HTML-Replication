@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* layout group */
+/* レイアウトに関わるスタイリングしか基本的に行わない */
+/* width, margin, padding, float */
+/* ヘッダー、ボディ、メイン、サイド、フッターなど大きなレイアウトを形成 */
+.ly_header {
+  padding-top: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.ly_header_inner {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
