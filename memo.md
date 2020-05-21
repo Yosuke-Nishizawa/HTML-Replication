@@ -434,6 +434,10 @@ header実践中。HTML作成途中
 
 footer着手
 
+### 2020/05/22
+
+footer途中
+
 ## ショートカット
 
 * 定規 alt + v
