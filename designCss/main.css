@@ -4,6 +4,12 @@
 .hp_bdtGray {
   border-top: 1px solid #777 !important;
 }
+.hp_bgcBase {
+  background-color: #efefef !important;
+}
+.hp_smSpace {
+  margin-bottom: 30px !important;
+}
 /* エレメントモジュール
 どこでも使い回せるモジュール
 */
@@ -32,6 +38,12 @@
   color: #ddd;
   font-size: 12px;
   text-align: center;
+}
+.el_lv2Heading {
+  padding-bottom: 10px;
+  border-bottom: 4px solid #e25c00;
+  font-size: 1.75rem;
+  font-weight: bold;
 }
 /* layout group */
 /* レイアウトに関わるスタイリングしか基本的に行わない */
@@ -158,4 +170,42 @@
 .bl_footerChildNav_link:focus,
 .bl_footerChildNav_link:hover {
   text-decoration: underline;
+}
+/* contents */
+.ly_cont {
+  max-width: 1230px;
+  padding: 60px 15px;
+  margin: 0 auto;
+}
+.bl_media {
+  display: flex;
+  align-items: center;
+}
+.bl_media.bl_media__rev {
+  flex-direction: row-reverse;
+}
+.bl_media__rev .bl_media_imgWrapper {
+  margin-right: 0;
+}
+.bl_media__rev .bl_media_body {
+  margin-right: 3.333333%;
+  text-align: right;
+}
+.bl_media_imgWrapper {
+  flex: 0 1 27.58333%;
+  margin-right: 3.33333%;
+}
+.bl_media_imgWrapper > img {
+  width: 100%;
+}
+.bl_media_body {
+  flex: 1;
+}
+.bl_media_body > *:last-child {
+  margin-bottom: 0;
+}
+.bl_media_ttl {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
