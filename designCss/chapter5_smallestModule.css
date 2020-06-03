@@ -83,4 +83,154 @@
   position: relative;
   display: inline-block;
   padding: .2em .3em;
+  border: 1px solid currentColor;
+  color: #e25c00;
+  text-decoration: none;
+  transition: .25s;
+}
+.el_beforeIconBtn:focus,
+.el_beforeIconBtn:hover {
+  background-color: #e25c00;
+  color: #fff;
+}
+.el_beforeIconBtn::before {
+  display: inline-block;
+  margin-right: .5em;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.el_beforeIconBtn.el_beforeIconBtn__download::before {
+  content: '\f019';
+}
+.el_beforeIconBtn.el_beforeIconBtn__zoom::before {
+  content: '\f00e';
+  transform: translateY(-6%);
+}
+.el_beforeIcon::before {
+  display: inline-block;
+  margin-right: .3em;
+  color: #e25c00;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+.el_beforeIcon.el_beforeIcon__pdf::before {
+  content: '\f1c1';
+}
+.el_beforeIcon.el_beforeIcon__excel::before {
+  content: '\f1c3';
+}
+.el_beforeIcon.el_beforeIcon__PP::before {
+  content: '\f1c4';
+}
+.el_beforeIcon.el_beforeIcon__checkSquare::before {
+  content: '\f14a';
+}
+.el_beforeIcon.el_beforeIcon__chevLeft::before {
+  content: '';
+  width: .375em;
+  height: .375em;
+  border-bottom: .125em solid #e25c00;
+  border-left: .125em solid #e25c00;
+  transform: rotate(45deg) translateY(-30%);
+}
+.el_afterIcon::after {
+  display: inline-block;
+  margin-left: .3em;
+  color: #e25c00;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.el_afterIcon.el_afterIcon__chevRight::after {
+  content: '';
+  width: .375em;
+  height: .375em;
+  border-top: .125em solid #e25c00;
+  border-right: .125em solid #e25c00;
+  transform: rotate(45deg);
+}
+.el_label {
+  display: inline-block;
+  padding: .2em .3em;
+  background-color: #e25c00;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+a.el_label {
+  text-decoration: none;
+  transition: .25s;
+}
+a.el_label:focus,
+a.el_label:hover {
+  background-color: #fff;
+  border-color: currentColor;
+  color: #e25c00;
+}
+.el_label.el_label__yellow {
+  background-color: #f1de00;
+  color: #000;
+}
+.el_roundedLabel {
+  display: inline-block;
+  padding: .3em .9em;
+  background-color: #e25c00;
+  border-radius: 1em;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: bold;
+}
+.el_lv1Heading {
+  padding: 30px 10px;
+  background-color: #e25c00;
+  color: #fff;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.el_lv1Heading > span {
+  position: relative;
+  display: inline-block;
+  transform: translateY(-20%);
+}
+.el_lv1Heading > span::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 80px;
+  height: 1px;
+  background-color: currentColor;
+  transform: translateX(-50%);
+}
+.el_lv2Heading {
+  padding-bottom: 10px;
+  border-bottom: 4px solid #e25c00;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.el_lv3Heading {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e25c00;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.el_lv4Heading {
+  padding-left: 6px;
+  border-left: 2px solid #e25c00;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.el_lv5Heading {
+  color: #e25c00;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+.el_lv6Heading {
+  font-size: 1.125rem;
+}
+.el_caution {
+  color: #d40152;
+}
+.el_note {
+  font-size: .75rem;
 }
